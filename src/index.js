@@ -207,7 +207,7 @@ client.on("message", async message => {
 		min = Math.ceil(0);
   		max = Math.floor(11);
   		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-		return message.reply(`The squad rates this $rate out of 10`)
+		return message.reply(`The squad rates this ${rate} out of 10`)
 	}
 });
 
