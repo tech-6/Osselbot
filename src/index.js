@@ -203,6 +203,12 @@ client.on("message", async message => {
 	if(command === "psych") {
 		return message.channel.send("Rules for finding a psychopath: \n1. Favorite color is orange \n2. Likes the left burners, worse if its top left\n3. Calls pizza sauce/tomato sauce gravy\n4. Doesnt like salad\n5. Likes country music\n6. Makes hot chocolate with water\n7. Likes black licorice")
 	}
+	if(command === "squad") {
+		min = Math.ceil(0);
+  		max = Math.floor(11);
+  		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+		return message.reply(`The squad rates this $rate out of 10`)
+	}
 });
 
 client.login(config.token);
