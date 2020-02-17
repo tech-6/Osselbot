@@ -39,9 +39,10 @@ client.on("guildDelete", guild => {
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
 	//people are assholes so this blocks it!
-	if(message.content.toLowerCase().includes('osseley','nigger',"nigga","niglet","nigglet")){
+	if(message.content.toLowerCase().includes('osseley','nigger',"nigga","niglet","nigglet","lil adderal")){
 		message.member.addRole('654366653093642241').catch(console.error);
 	      message.member.removeRole('514254335425773589').catch(console.error);
+		console.log(`${message.member} has been detained`)
 		return message.reply('Member has been D E T A I N E D <:yikes:632660765878255636>')
 	}
   // It's good practice to ignoe other bots. This also makes your bot ignore itself
