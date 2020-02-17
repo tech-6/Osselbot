@@ -1,0 +1,15 @@
+[Unit]
+Description="Osselbot coded for civilians all partying"
+
+[Service]
+ExecStart=/home/tech1/Osselbot/src/bot-start.sh
+Restart=always
+User=tech1
+# Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/home/tech1/Osselbot/src/
+
+[Install]
+WantedBy=multi-user.target
