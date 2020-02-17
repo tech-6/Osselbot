@@ -182,34 +182,35 @@ client.on("message", async message => {
 	// HERE COMES SHITTY COMMANDS MADE BY YOURS TRUELY
 	if(command === 'help') {
 		return message.reply('https://technicolor.2a03.party/bot/');
-	}
+	};
 	if(command === "rand") {
 		//Generates random number between 1-100
 		min = Math.ceil(0);
   		max = Math.floor(101);
   		return message.channel.send(Math.floor(Math.random() * (max - min)) + min); //The maximum is exclusive and the minimum is inclusive
-	}
+	};
 	if(command === "oath") {
 		return message.reply("The cadet oath is as follows.\nI pledge that I will serve faithfully in the Civil Air Patrol cadet program. That I will attend meetings regularly, wear my uniform properly, obey my officers, and advance my education and training rapidly to prepare myself to be of service to my community state and nation.");
 	};
 	if(command === "ask") {
 		return message.channel.send("Dont Ask, Just ask!\n https://iki.fi/sol/dontask.html")
-	}
+	};
 	if(command === "damage") {
 		return message.channel.send("https://cdn.discordapp.com/attachments/619631814696239142/678467158660874270/ohmydamage.mov")
-	}
+	};
 	if(command === "osseley") {
 		return message.channel.send("Ohhh Osseley,\n how I missed you sooo much \nOne of these days...")
-	}
+	};
 	if(command === "psych") {
 		return message.channel.send("Rules for finding a psychopath: \n1. Favorite color is orange \n2. Likes the left burners, worse if its top left\n3. Calls pizza sauce/tomato sauce gravy\n4. Doesnt like salad\n5. Likes country music\n6. Makes hot chocolate with water\n7. Likes black licorice")
-	}
+	};
 	if(command === "squad") {
 		min = Math.ceil(0);
   		max = Math.floor(11);
   		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-		return message.reply(`The squad rates this ${rate} out of 10`)
-	}
+		return message.reply(`The squad rates this ${rate} out of 10`);
+	};
+
 });
 
 client.login(config.token);
