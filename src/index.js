@@ -210,7 +210,9 @@ client.on("message", async message => {
   		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 		return message.reply(`The squad rates this ${rate} out of 10`);
 	};
-
+	if(command === "magic") {
+		return message.channel.send("Do you believe in magic in a young girl's heart\nHow the music can free her, whenever it starts\nAnd it's magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI'll tell you about the magic, and it'll free your soul\nBut it's like trying to tell a stranger \'bout rock and roll\'"}
+	}
 });
 
 client.login(config.token);
