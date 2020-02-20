@@ -227,7 +227,7 @@ client.on("message", async message => {
 			let member = message.mentions.members.first();
 			let role = message.guild.roles.find(role => role.name === `DEFCON ${con}`);
 			member.addRole(role)
-			return message.reply("DEFCON level set!\nGod Bless their souls")
+			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
 	if(command === "adderal") {
