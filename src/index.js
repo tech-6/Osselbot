@@ -75,13 +75,16 @@ client.on("message", async message => {
     	const sayMessage = args.join(" ");
 	if(sayMessage.includes('@'))
 		return message.reply("\nStop pinging yourself \nStop pinging yourself");
-	else{
+	else if (!message.member.roles.some(r=>["Admin", "Mods","Member of the Order of the b l u e","Botmeister","Ally of the Order"].includes(r.name)) ) {
 		// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
 		  message.delete().catch(O_o=>{});
 		// And we get the bot to say the thing:
-		  message.channel.send(sayMessage);
+		   return message.channel.send(sayMessage);
+		}
+		else {
+			return message.channel.send("Im sorry but we cant have nice things...")
+		}
 	}
-  	}
 
   if(command === "kick") {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
