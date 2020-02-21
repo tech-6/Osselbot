@@ -232,14 +232,14 @@ client.on("message", async message => {
 		};
 	};
 	if(command === "adderall") {
-		let quote = parseInt(args)
-		if(quote = 1) return message.channel.send(">>> They call me lil adderall")
-		if(quote = 2) return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
-		if(quote = 3) return message.channel.send(">>> So note to self don’t ask those types of questions to Osseley...I’ve been detained 3 times they call me...lil adderall");
-		if(quote = 4) return message.channel.send(">>> Alright I don’t know why I’m detained. I know all my detainments but not this one. But you know what they call me....you already guessed it........lil....adderall.");
-		if(quote = 5) return message.channel.send(">>> rubs hands\nYou know ya boy I got detained ahaha aint big of a deal my pickup lines...eh....they aight and you know Oseley she don't like it. AYE AYE AYE..shout out to Ossley biggest inspiration. But guess what my league wont stop right there. So you already know it...aight... they call me lil adderall. \(I do have ADHD I do take it responsibly to those of you dont find it funny I like making jokes about it because I dont like it\)");
-		if(quote = 6) return message.channel.send(">>> Aight..aight.. so you know stuff went down I was about to drop my new song “Osseley do you CAP with me” you know aight...rubs hands...and she don’t like it so I was like “aight”. Bro I swear to god she was like “I ain’t CAP’n with you”. BAM BAM. But you know what they call me.....Lil Adderall...");
-		if(quote = 7) return message.channel.send(">>> Lil adderall alright so I'm going to keep on doin g these until I leave CAP and I am thinking of it right now. My last lil adderall will be emotional and osselot will want me so yeah. You know life is aight I got my dog and yeah.");
+		let quote === args
+		if(quote = "1") return message.channel.send(">>> They call me lil adderall")
+		if(quote = "2") return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
+		if(quote = "3") return message.channel.send(">>> So note to self don’t ask those types of questions to Osseley...I’ve been detained 3 times they call me...lil adderall");
+		if(quote = "4") return message.channel.send(">>> Alright I don’t know why I’m detained. I know all my detainments but not this one. But you know what they call me....you already guessed it........lil....adderall.");
+		if(quote = "5") return message.channel.send(">>> rubs hands\nYou know ya boy I got detained ahaha aint big of a deal my pickup lines...eh....they aight and you know Oseley she don't like it. AYE AYE AYE..shout out to Ossley biggest inspiration. But guess what my league wont stop right there. So you already know it...aight... they call me lil adderall. \(I do have ADHD I do take it responsibly to those of you dont find it funny I like making jokes about it because I dont like it\)");
+		if(quote = "6") return message.channel.send(">>> Aight..aight.. so you know stuff went down I was about to drop my new song “Osseley do you CAP with me” you know aight...rubs hands...and she don’t like it so I was like “aight”. Bro I swear to god she was like “I ain’t CAP’n with you”. BAM BAM. But you know what they call me.....Lil Adderall...");
+		if(quote = "7") return message.channel.send(">>> Lil adderall alright so I'm going to keep on doin g these until I leave CAP and I am thinking of it right now. My last lil adderall will be emotional and osselot will want me so yeah. You know life is aight I got my dog and yeah.");
 		return message.channel.send("No quote found");
 		}
 
