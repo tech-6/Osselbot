@@ -223,7 +223,7 @@ client.on("message", async message => {
 		if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
-			let con = parseInt(args[1], 10)
+			let con = parseInt(args[1], 5)
 			let member = message.mentions.members.first();
 			let role = message.guild.roles.find(role => role.name === `DEFCON ${con}`);
 			member.addRole(role)
