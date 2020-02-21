@@ -232,7 +232,7 @@ client.on("message", async message => {
 		};
 	};
 	if(command === "adderall") {
-		let quote = parseInt(args[1], 10)
+		let quote = parseInt(args, 10)
 		if(quote = 1) return message.channel.send(">>> They call me lil adderall")
 		if(quote = 2) return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
 		if(quote = 3) return message.channel.send(">>> So note to self don’t ask those types of questions to Osseley...I’ve been detained 3 times they call me...lil adderall");
