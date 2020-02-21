@@ -166,7 +166,7 @@ client.on("message", async message => {
 	else {
 		member.addRole('654366653093642241').catch(console.error);
 	      member.removeRole('514254335425773589').catch(console.error);
-		return message.reply("Member has been D E T A I N E D <:yikes:632660765878255636>")
+		return message.reply("Member has been D E T A I N E D<:yikes:632660765878255636>\n**DEFCON** level increased\nGod Bless their souls")
 	}
   }
   if(command === "retain") {
@@ -227,10 +227,11 @@ client.on("message", async message => {
 			let member = message.mentions.members.first();
 			let role = message.guild.roles.find(role => role.name === `DEFCON ${con}`);
 			member.addRole(role)
+			client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${con} `)
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
-	if(command === "adderal") {
+	if(command === "adderall") {
 		let const = parseInt(args[1], 10)
 		if(quote = 1) return message.channel.send(">>> They call me lil adderall")
 		if(quote = 2) return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
