@@ -218,7 +218,7 @@ client.on("message", async message => {
 		return message.channel.send("Do you believe in magic in a young girl\'s heart\nHow the music can free her, whenever it starts\nAnd it\'s magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI\'ll tell you about the magic, and it\'ll free your soul\nBut it\'s like trying to tell a stranger bout rock and roll")
 	}
 	//DEFCON Roles
-	if(command === "defcon") {
+	/*if(command === "defcon") {
 		//5 levels till ban
 		if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 		return message.reply("Sorry, you don't have permissions to use this!");
@@ -231,6 +231,7 @@ client.on("message", async message => {
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
+	*/
 	if(command === "adderall") {
 		let quote = args
 		if(args.includes("1")) return message.channel.send(">>> They call me lil adderall")
