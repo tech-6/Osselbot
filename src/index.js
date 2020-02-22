@@ -241,6 +241,7 @@ client.on("message", async message => {
 		if(args.includes("7")) return message.channel.send(">>> Lil adderall alright so I'm going to keep on doin g these until I leave CAP and I am thinking of it right now. My last lil adderall will be emotional and osselot will want me so yeah. You know life is aight I got my dog and yeah.");
 		return message.channel.send("No quote found");
 		}
+	return message.reply("command not found")
 });
 
 client.login(config.token);
