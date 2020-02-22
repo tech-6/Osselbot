@@ -18,20 +18,19 @@ client.on("ready", () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-
-  client.user.setActivity(`for ;`,{ type: 'LISTENING' });
+  client.user.setActivity(`${guild.memberCount} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`for ;`,{ type: 'LISTENING' });
+  client.user.setActivity(`${guild.memberCount} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`for ;`,{ type: 'LISTENING' });
+  client.user.setActivity(`${guild.memberCount} of you horrible people`,{ type: 'LISTENING' });
 });
 //osseley stop
 
@@ -218,12 +217,12 @@ client.on("message", async message => {
 		return message.channel.send("Do you believe in magic in a young girl\'s heart\nHow the music can free her, whenever it starts\nAnd it\'s magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI\'ll tell you about the magic, and it\'ll free your soul\nBut it\'s like trying to tell a stranger bout rock and roll")
 	}
 	//DEFCON Roles
-	/*if(command === "defcon") {
+	if(command === "defcon") {
 		//5 levels till ban
 		if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
-			let con = args.match(/(\d+)/)
+			let con = args[1]
 			let member = message.mentions.members.first();
 			let role = message.guild.roles.find(role => role.name === `DEFCON ${con}`);
 			member.addRole(role)
@@ -231,9 +230,8 @@ client.on("message", async message => {
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
-	*/
 	if(command === "adderall") {
-		let quote = args
+		let quote = args[0]
 		if(args.includes("1")) return message.channel.send(">>> They call me lil adderall")
 		if(args.includes("2")) return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
 		if(args.includes("3")) return message.channel.send(">>> So note to self don’t ask those types of questions to Osseley...I’ve been detained 3 times they call me...lil adderall");
@@ -243,8 +241,6 @@ client.on("message", async message => {
 		if(args.includes("7")) return message.channel.send(">>> Lil adderall alright so I'm going to keep on doin g these until I leave CAP and I am thinking of it right now. My last lil adderall will be emotional and osselot will want me so yeah. You know life is aight I got my dog and yeah.");
 		return message.channel.send("No quote found");
 		}
-
-
 });
 
 client.login(config.token);
