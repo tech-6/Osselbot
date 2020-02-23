@@ -249,7 +249,7 @@ client.on("message", async message => {
 		};
 	};
 	if(command === "adderall") {
-		switch(args[0]) {
+		switch(parseInt(args[0],10)) {
 			case 1:
 				return message.channel.send(">>> They call me lil adderall")
 			case 2:
