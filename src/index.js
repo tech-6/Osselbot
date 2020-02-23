@@ -37,6 +37,12 @@ client.on("guildDelete", guild => {
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
+
+
+  // It's good practice to ignoe other bots. This also makes your bot ignore itself
+  // and not get into a spam loop (we call that "botception ").
+  	if(message.author.bot) return;
+
 	//people are assholes so this blocks it!
 	if(message.content.toLowerCase().includes('osseley','nigger',"nigga","niglet","nigglet","lil adderal")){
 		message.member.addRole('654366653093642241').catch(console.error);
@@ -44,9 +50,6 @@ client.on("message", async message => {
 		console.log(`${message.member} has been detained`)
 		return message.reply('Member has been D E T A I N E D <:yikes:632660765878255636>')
 	}
-  // It's good practice to ignoe other bots. This also makes your bot ignore itself
-  // and not get into a spam loop (we call that "botception ").
-  	if(message.author.bot) return;
 
   // Also good practice to ignore any message that does not start with our prefix,
   // which is set in the configuration file.
