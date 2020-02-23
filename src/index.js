@@ -223,7 +223,7 @@ client.on("message", async message => {
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
 			let member = message.mentions.members.first();
-			let role = 1;
+			let role = "";
 			switch(args[1]) {
 				case 5:
 					role = message.guild.roles.find(role => role.name === `DEFCON 5`);
