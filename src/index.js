@@ -222,11 +222,33 @@ client.on("message", async message => {
 		if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
-			let con = args[1]
 			let member = message.mentions.members.first();
-			let role = message.guild.roles.find(role => role.name === `DEFCON ${con}`);
-			member.addRole(role)
-			client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${con} `)
+			let role = 1;
+			switch(args[1]) {
+				case 5:
+					role = message.guild.roles.find(role => role.name === `DEFCON 5`);
+					member.addRole(role);
+				break;
+				case 4:
+					role = message.guild.roles.find(role => role.name === `DEFCON 4`);
+					member.addRole(role);
+			    break;
+			  	case 3:
+					role = message.guild.roles.find(role => role.name === `DEFCON 3`);
+			  		member.addRole(role);
+			  	case 2:
+					role = message.guild.roles.find(role => role.name === `DEFCON 2`);
+					member.addRole(role);
+			    	break;
+			  	case 1:
+					role = message.guild.roles.find(role => role.name === `DEFCON 1`);
+					member.addRole(role);
+			    	break;
+					message.reply("Defcon level not found please use 1-5");
+					return;
+				break;
+			};
+			client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${role} `)
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
