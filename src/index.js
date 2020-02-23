@@ -246,11 +246,8 @@ client.on("message", async message => {
 			    	break;
 			};
 			try{
-			client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${role} `);
-			};
-			catch(error) {
-				console.error(error);
-			}
+				client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${role} `);
+			} catch(error) console.error(error);
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
