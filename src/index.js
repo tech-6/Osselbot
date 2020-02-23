@@ -244,17 +244,13 @@ client.on("message", async message => {
 					var role = message.guild.roles.find(role => role.name === `DEFCON 1`);
 					member.addRole(role);
 			    	break;
-					default:
-					message.reply("Defcon level not found please use 1-5");
-					return;
-				break;
 			};
 			client.channels.get("680243388695445587").send(`${member} has had their **DEFCON** level set to ${role} `)
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
 	if(command === "adderall") {
-		switch(arg[0]) {
+		switch(args[0]) {
 			case 1:
 				return message.channel.send(">>> They call me lil adderall")
 			case 2:
