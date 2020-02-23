@@ -223,25 +223,25 @@ client.on("message", async message => {
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
 			let member = message.mentions.members.first();
-			let role = "";
+			var role = "";
 			switch(args[1]) {
 				case 5:
-					role = message.guild.roles.find(role => role.name === `DEFCON 5`);
+					var role = message.guild.roles.find(role => role.name === `DEFCON 5`);
 					member.addRole(role);
 				break;
 				case 4:
-					role = message.guild.roles.find(role => role.name === `DEFCON 4`);
+					var role = message.guild.roles.find(role => role.name === `DEFCON 4`);
 					member.addRole(role);
 			    	break;
 			  	case 3:
-					role = message.guild.roles.find(role => role.name === `DEFCON 3`);
+					var role = message.guild.roles.find(role => role.name === `DEFCON 3`);
 			  		member.addRole(role);
 			  	case 2:
-					role = message.guild.roles.find(role => role.name === `DEFCON 2`);
+					var role = message.guild.roles.find(role => role.name === `DEFCON 2`);
 					member.addRole(role);
 			    	break;
 			  	case 1:
-					role = message.guild.roles.find(role => role.name === `DEFCON 1`);
+					var role = message.guild.roles.find(role => role.name === `DEFCON 1`);
 					member.addRole(role);
 			    	break;
 					default:
