@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 // Load up the discord.js library
 const Discord = require("discord.js");
-
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -271,6 +270,19 @@ client.on("message", async message => {
 		 		return message.channel.send(">>> I really don’t know what I did, like last year I had depression and it was really bad. At school I would get threats and really get teased bad. I would be called numerous names because the things I did. At one point in life I really just became alone and do rowing constantly. At that time I took adderall (I have adhd I use it responsibly never abused it) that thing kept me real down and just constant day dreaming. At the year of 2018 I got hit by a car while on a crosswalk. I was going down hill and the driver signaled me that I could pass.I was going 8MPH and the driver pulled up when I was 5 feet away from him and I rolled over his hood. Than I fell down broke my thumb and sprained my wrist. Instead of helping me the driver looked at me and fled. No drivers stoped to see if I was ok and nothing. My chain was broken and I had to walk to school with a strapped bike on my backpack and my wheel popped from a screw. But what really got me interested was aviation. Being inhuman and flying above the clouds is despicable. Couldn’t find a relationship because of my ADHD I just do stuff like jumping off a dock with my clothes on and just really stupid stuff. All the stuff I do is legal. But somehow people that vape smoke do drugs get mad ho*s. I really haven’t saw that cute. Maybe one day I’ll get someone that understands.but you know what they call me.....li-..l......adderall.");
 		};
 	};
+	if (command === "quote") {
+		min = Math.ceil(0);
+  		max = Math.floor(2);
+		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
+		let quotes = [
+		'<Airman, Alcoholic> Im a segregationist',
+		'eegg'
+
+		]
+  		message.channerel.send(quotes[Math.floor(Math.random() * (max - min)) + min)]) //The maximum is exclusive and the minimum is inclusive
+
+	}
+
 });
 
 client.login(config.token);
