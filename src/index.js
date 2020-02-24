@@ -272,7 +272,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(13);
+  		max = Math.floor(19);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -283,11 +283,17 @@ client.on("message", async message => {
 		'<75021> did you ever hear the tragedy of darth plagueis the wise?',
 		'<Airman, hydrated> if thicc thighs save lives, there\'s no wonder you\'re a lifeguard.',
 		'<osselbot> hello all put the best of your best quotes into this channel for consideration to be put as quotes into the bot. Thanks!',
-		'<Triple> I am *litterally* shitting myself',
+		'<Triple> I am *literally* shiting myself',
 		'<aviadarius> What\'s the Asian president\nJim\nSomething\nJim Chang',
 		'<aviadarius> i forgot',
 		'<N29UB> Asia is a continent',
-		'<Jim Chang> https://cdn.discordapp.com/attachments/514252476837396494/681340502297149523/Jim_chang_backstory.png'
+		'<Jim Chang> https://cdn.discordapp.com/attachments/514252476837396494/681340502297149523/Jim_chang_backstory.png',
+		'<Triple> Long Live the Philippines!',
+		'<Sargent Kot> meow',
+		'<Sargent Kot> I support jihad',
+		'<N28UB> That guy is not just a tool, he\'s the entire home depot.',
+		'<Director krennic> we have a log you daft idiot',
+		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
