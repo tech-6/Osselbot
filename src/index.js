@@ -272,7 +272,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(23);
+  		max = Math.floor(32);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -289,15 +289,25 @@ client.on("message", async message => {
 		'<N29UB> Asia is a continent',
 		'<Jim Chang> https://cdn.discordapp.com/attachments/514252476837396494/681340502297149523/Jim_chang_backstory.png',
 		'<Triple> Long Live the Philippines!',
-		'<Sergent Kot> meow',
-		'<Srrgent Kot> I support jihad',
-		'<Sergent Kot> He was detained for fighting against israel FREE PALESTINE MEOW',
-		'<N28UB> That guy is not just a tool, he\'s the entire home depot.',
+		'<Sergeant Kot> meow',
+		'<Sergeant Kot> I support jihad \uFDFD',
+		'<Sergeant Kot> He was detained for fighting against israel FREE PALESTINE MEOW',
+		'<N29UB> That guy is not just a tool, he\'s the entire home depot.',
 		'<Director krennic> we have a log you daft idiot',
 		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer',
 		'<Rodrigo Duterte, 16th President of the Philippines> Please don’t order me around. … Or would you rather that I declare martial law?',
 		'https://cdn.discordapp.com/attachments/521522780341141540/681344502593617921/image0.jpg',
-		'<Gen. James \"Mad Dog\" Mattis>We\'ve backed off in good faith to try to give you a chance to straighten this problem out. But I am going to beg with you for a minute. I\'m going to plead with you, do not cross us. Because if you do, the survivors will write about what we do here for 10,000 years.'
+		'<Gen. James \"Mad Dog\" Mattis>We\'ve backed off in good faith to \
+		try to give you a chance to straighten this problem out. But I am going to beg with you for a minute. I\'m going to plead with you, do not cross us.\
+		 Because if you do, the survivors will write about what we do here for 10,000 years.',
+		'<Pete Buttigedge> In america some people want small mommy gf with small milky, but we need to make sure that the tent is big enough for the mommy gf with biggy milky and penis. My god I need this',
+		'<Triple> Episode 108: Free Beef',
+		'<Yusha Thomas> The only thing free in the army is these hands, and imma issue em out like jehovas witness pamphlets if you keep talking',
+		'<Gen. James \"Mad Dog\" Mattis> I come in peace. I didn\’t bring artillery. But I’m pleading with you, with tears in my eyes: If you fuck with me, I’ll kill you all.',
+		'<N29UB> Oh I’m good at cryptology. Take each letter, assign that letter a number, add them all together, and shove it up your ass',
+		'<Rodrigo Duterte> Me? They are saying that I\'m part of a death squad? True, that\'s true.',
+		'<Sergeant Kot> We live in a squadron.',
+		'<Katy Perry> Is math related to science?'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
