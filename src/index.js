@@ -272,14 +272,23 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(2);
+  		max = Math.floor(12);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
-		'<Airman, Alcoholic> Im a segregationist',
-		'eegg'
-
+		'<Airman, hydrated> Im a segregationist',
+		'<N29UB> Holy shit. My mom came into my room to bring me a plate of general tso\’s chicken and I literally screamed at her and hit the plate of chicken out of her hand. She started yelling and swearing at me and I slammed the door on her. I\'m so distressed right now I don\'t know what to do. I didn\'t mean to do that to my mom but I\'m literally in shock from the termination of our glorious PLAN nuclear carrier. I feel like I\'m going to explode. Why the fucking fuck is Xi doing this? This can\'t be happening. I\'m having a fucking breakdown (like a kuznetsov). I don\'t want to believe the world is dominated by the US Navy. I want a future to believe in. I want China to be global hegemon and annex the South China Sea. I cannot fucking deal with this right now. It wasn\'t supposed to be like this, I thought they were making good progress on this carrier???? This is so fucked',
+		'<osselot> go out to my cotton field you 3/5th of a human foot!',
+		'<Triple> no',
+		'<Ranger Wannabe> To be a ranger, one must start as a rock eater.',
+		'<75021> did you ever hear the tragedy of darth plagueis the wise?',
+		'<Airman, hydrated> if thicc thighs save lives, there\'s no wonder you\'re a lifeguard.',
+		'<osselbot> hello all put the best of your best quotes into this channel for consideration to be put as quotes into the bot. Thanks!',
+		'<Triple> I am *litterally* shitting myself',
+		'<aviadarius> What\'s the Asian president\nJim\nSomething\nJim Chang',
+		'<aviadarius> i forgot',
+		'<N29UB> Asia is a continent'
 		]
-  		message.channerel.send(quotes[Math.floor(Math.random() * (max - min)) + min)]) //The maximum is exclusive and the minimum is inclusive
+  		return message.channerel.send(quotes[Math.floor(Math.random() * (max - min)) + min)]) //The maximum is exclusive and the minimum is inclusive
 
 	}
 
