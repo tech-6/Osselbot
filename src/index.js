@@ -291,6 +291,7 @@ client.on("message", async message => {
 		'<Triple> Long Live the Philippines!',
 		'<Sargent Kot> meow',
 		'<Sargent Kot> I support jihad',
+		'<Sargent Kot> He was detained for fighting against israel FREE PALESTINE MEOW',
 		'<N28UB> That guy is not just a tool, he\'s the entire home depot.',
 		'<Director krennic> we have a log you daft idiot',
 		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer',
