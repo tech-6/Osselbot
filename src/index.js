@@ -289,7 +289,7 @@ client.on("message", async message => {
 		'<N29UB> Asia is a continent'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
-  		return message.channerl.send(quotes[number])
+  		return message.channel.send(quotes[number])
 	}
 
 });
