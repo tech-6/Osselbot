@@ -272,7 +272,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(19);
+  		max = Math.floor(21);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -293,7 +293,9 @@ client.on("message", async message => {
 		'<Sargent Kot> I support jihad',
 		'<N28UB> That guy is not just a tool, he\'s the entire home depot.',
 		'<Director krennic> we have a log you daft idiot',
-		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer'
+		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer',
+		'<Rodrigo Duterte, 16th President of the Philippines> Please don’t order me around. … Or would you rather that I declare martial law?',
+		'https://cdn.discordapp.com/attachments/521522780341141540/681344502593617921/image0.jpg'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
