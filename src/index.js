@@ -297,7 +297,7 @@ client.on("message", async message => {
 		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer',
 		'<Rodrigo Duterte, 16th President of the Philippines> Please don’t order me around. … Or would you rather that I declare martial law?',
 		'https://cdn.discordapp.com/attachments/521522780341141540/681344502593617921/image0.jpg',
-		'We\'ve backed off in good faith to try to give you a chance to straighten this problem out. But I am going to beg with you for a minute. I\'m going to plead with you, do not cross us. Because if you do, the survivors will write about what we do here for 10,000 years.'
+		'<Gen. James \"Mad Dog\" Mattis>We\'ve backed off in good faith to try to give you a chance to straighten this problem out. But I am going to beg with you for a minute. I\'m going to plead with you, do not cross us. Because if you do, the survivors will write about what we do here for 10,000 years.'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
