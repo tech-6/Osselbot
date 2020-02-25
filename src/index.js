@@ -252,7 +252,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(33);
+  		max = Math.floor(37);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -271,7 +271,7 @@ client.on("message", async message => {
 		'<Triple> Long Live the Philippines!',
 		'<Sergeant Kot> meow',
 		'<Sergeant Kot> I support jihad \uFDFD',
-		'<Sergeant Kot> He was detained for fighting against israel FREE PALESTINE MEOW',
+		'<Sergeant Kot> He was detained for fighting against isreal FREE PALESTINE MEOW',
 		'<N29UB> That guy is not just a tool, he\'s the entire home depot.',
 		'<Director krennic> we have a log you daft idiot',
 		'<SSAI> I\'m trying to learn how to make a car bomb and get it past the isreali border\n<sara mist> Okay boomer',
@@ -286,7 +286,12 @@ client.on("message", async message => {
 		'<Rodrigo Duterte> Me? They are saying that I\'m part of a death squad? True, that\'s true.',
 		'<Sergeant Kot> We live in a squadron.',
 		'<Katy Perry> Is math related to science?',
-		'<k> Time to take names and make my parents disappointed in me.'
+		'<k> Time to take names and make my parents disappointed in me.',
+		'<drill> would you be offended if I dump a bunch of tea into the harbor.',
+		'<anonymous> I don\'t care about the regs.',
+		'<Airman, hydrated> Besteurung ist Diebstahl',
+		'<Sergeant kot> PLANE RAPIST DONT\'T LET HIM IN THE SMITHSONIAN.',
+		'<Creamsicle> I guess it\'s my fault will fix.',
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
