@@ -43,7 +43,7 @@ client.on("message", async message => {
   	if(message.author.bot) return;
 
 	//people are assholes so this blocks it!
-	if(message.content.toLowerCase().includes('osseley','nigger',"nigga","niglet","nigglet","lil adderal")){
+	if(message.content.toLowerCase().includes('nigger',"nigga","niglet","nigglet")){
 		message.member.addRole('654366653093642241').catch(console.error);
 	      message.member.removeRole('514254335425773589').catch(console.error);
 		console.log(`${message.member} has been detained`)
