@@ -250,26 +250,6 @@ client.on("message", async message => {
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
 		};
 	};
-	if(command === "adderall") {
-		switch(parseInt(args[0],10)) {
-			case 1:
-				return message.channel.send(">>> They call me lil adderall")
-			case 2:
-				return message.channel.send(">>> Second time being detained...I faked my death by having a fake seizure.......You know what they call me......Lil Adderall");
-			case 3:
-				return message.channel.send(">>> So note to self don’t ask those types of questions to Osseley...I’ve been detained 3 times they call me...lil adderall");
-			case 4:
-				return message.channel.send(">>> Alright I don’t know why I’m detained. I know all my detainments but not this one. But you know what they call me....you already guessed it........lil....adderall.");
-			case 5:
-				return message.channel.send(">>> rubs hands\nYou know ya boy I got detained ahaha aint big of a deal my pickup lines...eh....they aight and you know Oseley she don't like it. AYE AYE AYE..shout out to Ossley biggest inspiration. But guess what my league wont stop right there. So you already know it...aight... they call me lil adderall. \(I do have ADHD I do take it responsibly to those of you dont find it funny I like making jokes about it because I dont like it\)");
-			case 6:
-				return message.channel.send(">>> Aight..aight.. so you know stuff went down I was about to drop my new song “Osseley do you CAP with me” you know aight...rubs hands...and she don’t like it so I was like “aight”. Bro I swear to god she was like “I ain’t CAP’n with you”. BAM BAM. But you know what they call me.....Lil Adderall...");
-			case 7:
-				return message.channel.send(">>> Lil adderall alright so I'm going to keep on doin g these until I leave CAP and I am thinking of it right now. My last lil adderall will be emotional and osselot will want me so yeah. You know life is aight I got my dog and yeah.");
-			case 8:
-		 		return message.channel.send(">>> I really don’t know what I did, like last year I had depression and it was really bad. At school I would get threats and really get teased bad. I would be called numerous names because the things I did. At one point in life I really just became alone and do rowing constantly. At that time I took adderall (I have adhd I use it responsibly never abused it) that thing kept me real down and just constant day dreaming. At the year of 2018 I got hit by a car while on a crosswalk. I was going down hill and the driver signaled me that I could pass.I was going 8MPH and the driver pulled up when I was 5 feet away from him and I rolled over his hood. Than I fell down broke my thumb and sprained my wrist. Instead of helping me the driver looked at me and fled. No drivers stoped to see if I was ok and nothing. My chain was broken and I had to walk to school with a strapped bike on my backpack and my wheel popped from a screw. But what really got me interested was aviation. Being inhuman and flying above the clouds is despicable. Couldn’t find a relationship because of my ADHD I just do stuff like jumping off a dock with my clothes on and just really stupid stuff. All the stuff I do is legal. But somehow people that vape smoke do drugs get mad ho*s. I really haven’t saw that cute. Maybe one day I’ll get someone that understands.but you know what they call me.....li-..l......adderall.");
-		};
-	};
 	if (command === "quote") {
 		min = Math.ceil(0);
   		max = Math.floor(32);
