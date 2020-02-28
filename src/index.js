@@ -252,7 +252,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(47);
+  		max = Math.floor(48);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -301,7 +301,9 @@ client.on("message", async message => {
 		'<Jim Chang> sad',
 		'<Triple> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s over-under. I\'m so distressed right now I don\'t know what to do. I didn\'t mean to literally shoosh my MooM but i\'m literally in shlock from the self-quarantining of Iran\'s health minister. This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n me',
 		'<Sara Mist> Really? Right in front of my General Ts\'s?',
-		'<Rangern\'t> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s sawed-off 14 gauge shotgun. I\'m so distressertsid rigir now I don\'t know what to do. I didn\'t mean to literetil shoosh my MooM but i\'m literally in shlocc from the  This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n\n\n me'
+		'<Rangern\'t> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s sawed-off 14 gauge shotgun. I\'m so distressertsid rigir now I don\'t know what to do. I didn\'t mean to literetil shoosh my MooM but i\'m literally in shlocc from the  This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n\n\n me',
+		'<Jordan :b:. Peterson> We need to form a gamer ethno-state to secure the future for the next generations.'
+
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
