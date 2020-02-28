@@ -308,7 +308,7 @@ client.on("message", async message => {
 	}
 	if (command === "fix") {
 		if(message.member.roles.some(r=>["Botmeister"].includes(r.name))) {
-		return message.reply("I guess it\'s my fault will fix.");
+		return message.channel.send("I guess it\'s my fault will fix.");
 		};
 		return;
 	};
