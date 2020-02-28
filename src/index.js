@@ -306,6 +306,11 @@ client.on("message", async message => {
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
 	}
+	if (command === "fix") {
+		if(!message.member.roles.some(r=>["Botmeister"].includes(r.name))) {
+		return message.reply("I guess it\'s my fault will fix.");
+		};
+	};
 });
 
 client.login(config.token);
