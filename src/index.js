@@ -307,9 +307,10 @@ client.on("message", async message => {
   		return message.channel.send(quotes[number])
 	}
 	if (command === "fix") {
-		if(!message.member.roles.some(r=>["Botmeister"].includes(r.name))) {
+		if(message.member.roles.some(r=>["Botmeister"].includes(r.name))) {
 		return message.reply("I guess it\'s my fault will fix.");
 		};
+		return;
 	};
 });
 
