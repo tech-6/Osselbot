@@ -290,8 +290,18 @@ client.on("message", async message => {
 		'<drill> would you be offended if I dump a bunch of tea into the harbor.',
 		'<anonymous> I don\'t care about the regs.',
 		'<Airman, hydrated> Besteurung ist Diebstahl',
-		'<Sergeant kot> PLANE RAPIST DONT\'T LET HIM IN THE SMITHSONIAN.',
+		'<Sergeant kot> PLANE RAPIST DON\'T LET HIM IN THE SMITHSONIAN.',
 		'<Creamsicle> I guess it\'s my fault will fix.',
+		'<Rodrigo Duterte> We talked to Kerry, he was actually OK because I had a fight with his ambassador. I told him: \'your ambassador is a gay son of a bitch.\'',
+		'<triple> Holy shit. My mom came into my room to bring me a plate of bread on a stick and I literally screamed at her and hit the plate of bread out of her hand. She started yelling and swearing at me and I slammed the door on her. I\'m so distressed right now I don\'t know what to do. I didn\'t mean to do that to my mom but I\'m literally in shock from the rounding up of all my family members and watching each and every one of them being executed.  I feel like I\'m going to explode. Why the fucking fuck is Hitler doing this? This can\'t be happening. I\'m having a fucking breakdown (like an SS Scharführer who didn\'t get to bang a Polish girl) I don\'t want to believe the world is dominated by the Germans. I want a future to believe in. I want Poland to be global hegemon and help Israel become a reality. I cannot fucking deal with this right now. It wasn\'t supposed to be like this, I thought we were finally able to evade such horrible bullshit. This is so fucked',
+		'<Allah Gold> Game time started',
+		'<iPhone> ;quote',
+		'<Krennic> This is the most public area.',
+		'<Krennic> Your mom\'s bedroom is the most public area.',
+		'<Jim Chang> sad',
+		'<Triple> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s over-under. I\'m so distressed right now I don\'t know what to do. I didn\'t mean to literally shoosh my MooM but i\'m literally in shlock from the self-quarantining of Iran\'s health minister. This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n me',
+		'<Sara Mist> Really? Right in front of my General Ts\'s?',
+		'<Rangern\'t> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s sawed-off 14 gauge shotgun. I\'m so distressertsid rigir now I don\'t know what to do. I didn\'t mean to literetil shoosh my MooM but i\'m literally in shlocc from the  This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n\n\n me'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
