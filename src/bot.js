@@ -247,7 +247,7 @@ client.on("message", async message => {
 					member.roles.add(role);
 			    	break;
 			};
-			return message.reply(`\n**DEFCON** level set to DEFCON ${role}\nGod Bless their souls"`)
+			return message.reply(`\n**DEFCON** level set to DEFCON ${args[1]}\nGod Bless their souls"`)
 		};
 	};
 	if (command === "quote") {
