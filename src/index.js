@@ -92,7 +92,7 @@ client.on("message", async message => {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit:
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.some(r=>["Admin", "Moderator","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+    if(!message.member.roles.cache.some(r=>["Admin", "Moderator","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
 
     // Let's first check if we have a member and if we can kick them!
@@ -119,7 +119,7 @@ client.on("message", async message => {
   if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
-    if(!message.member.roles.some(r=>["Administrator","Member of the Order of the b l u e"].includes(r.name)) )
+    if(!message.member.roles.cache.some(r=>["Administrator","Member of the Order of the b l u e"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
 
     let member = message.mentions.members.first();
@@ -138,7 +138,7 @@ client.on("message", async message => {
 
   if(command === "purge") {
   //Vibe check
-	  if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+	  if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 	  return message.reply("Sorry, you don't have permissions to use this!");
   // This command removes all messages from all users in the channel, up to 100.
 	  else {
@@ -150,7 +150,7 @@ client.on("message", async message => {
 			  return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
 
   // So we get our messages, and delete them. Simple enough, right?
-		  const fetched = await message.channel.fetchMessages({limit: deleteCount});
+		  const fetched = await message.channel.messages.fetch({limit: deleteCount});
 		  message.channel.bulkDelete(fetched)
 			  .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
 	  }
@@ -158,7 +158,7 @@ client.on("message", async message => {
 
   if(command === "detain") {
     //For Civilians all partying
-    if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+    if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
 
     let member = message.mentions.members.first();
@@ -172,7 +172,7 @@ client.on("message", async message => {
   }
   if(command === "retain") {
     //For Civilians all partying
-    if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+    if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
 
     let member = message.mentions.members.first();
@@ -221,7 +221,7 @@ client.on("message", async message => {
 	//DEFCON Roles
 	if(command === "defcon") {
 		//5 levels till ban
-		if(!message.member.roles.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+		if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 		return message.reply("Sorry, you don't have permissions to use this!");
 		else {
 			let member = message.mentions.members.first();
@@ -309,7 +309,7 @@ client.on("message", async message => {
   		return message.channel.send(quotes[number])
 	}
 	if (command === "fix") {
-		if(message.member.roles.some(r=>["Botmeister"].includes(r.name))) {
+		if(message.member.roles.cache.some(r=>["Botmeister"].includes(r.name))) {
 		return message.channel.send("I guess it\'s my fault will fix.");
 		};
 		return;
