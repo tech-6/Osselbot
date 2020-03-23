@@ -74,7 +74,7 @@ client.on("message", async message => {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use.
     // To get the "message" itself we join the `args` back into a string with spaces:
     		const sayMessage = args.join(" ");
-		if (message.cache.member.roles.some(r=>["Admin", "Mods","Member of the Order of the b l u e","Botmeister","Ally of the Order","say"].includes(r.name)) ){
+		if (message.member.cache.roles.some(r=>["Admin", "Mods","Member of the Order of the b l u e","Botmeister","Ally of the Order","say"].includes(r.name)) ){
 			if(sayMessage.includes('@')) {
 			return message.reply("\nStop pinging yourself \nStop pinging yourself");
 		}
