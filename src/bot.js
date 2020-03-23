@@ -11,19 +11,18 @@ const config = require("./config.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
-
+//Activity setting
 client.on("ready", () => {
-	  // This event will run if the bot starts, and logs in, successfully.
-	  console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-	  // Example of changing the bot's playing game to something useful. `client.user` is what the
-	  // docs refer to as the "ClientUser".
-	  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+	// This event will run if the bot starts, and logs in, successfully.
+	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+	// Example of changing the bot's playing game to something useful. `client.user` is what the
+	// docs refer to as the "ClientUser".
+	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
-
 client.on("guildCreate", guild => {
-  // This event triggers when the bot joins a guild.
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+	// This event triggers when the bot joins a guild.
+	console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
+	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on('guildMemberAdd', member => {
@@ -35,13 +34,12 @@ client.on('guildMemberRemove', member => {
   	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 client.on("guildDelete", guild => {
-  // this event triggers when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+  	// this event triggers when the bot is removed from a guild.
+  	console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+  	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
-//osseley stop
 
-
+//Actual command stuff
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
 
