@@ -14,22 +14,22 @@ const config = require("./config.json");
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+  console.log(`Bot has started, with ${client.users.cache.cache.size} users, in ${client.channels.cache.cache.size} channels of ${client.guilds.cache.cache.size} guilds.`);
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
-  client.user.setActivity(`${client.users.size} of you horrible people`,{ type: 'LISTENING' });
+  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`${client.users.size} of you horrible people`,{ type: 'LISTENING' });
+  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`${client.users.size} of you horrible people`,{ type: 'LISTENING' });
+  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 //osseley stop
 
