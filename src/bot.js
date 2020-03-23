@@ -238,6 +238,7 @@ client.on("message", async message => {
 			  	case 3:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 3`);
 			  		member.roles.add(role);
+				break;
 			  	case 2:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 2`);
 					member.roles.add(role);
