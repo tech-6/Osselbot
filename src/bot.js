@@ -228,25 +228,27 @@ client.on("message", async message => {
 			var role = "";
 			switch(args[1]) {
 				case 5:
-					var role = message.guild.roles.find(role => role.name === `DEFCON 5`);
+					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 5`);
 					member.roles.add(role);
 				break;
 				case 4:
-					var role = message.guild.roles.find(role => role.name === `DEFCON 4`);
+					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 4`);
 					member.roles.add(role);
 			    	break;
 			  	case 3:
-					var role = message.guild.roles.find(role => role.name === `DEFCON 3`);
+					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 3`);
 			  		member.roles.add(role);
 				break;
 			  	case 2:
-					var role = message.guild.roles.find(role => role.name === `DEFCON 2`);
+					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 2`);
 					member.roles.add(role);
 			    	break;
 			  	case 1:
-					var role = message.guild.roles.find(role => role.name === `DEFCON 1`);
+					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 1`);
 					member.roles.add(role);
 			    	break;
+				default:
+					return message.reply(`DEFCON not set is ${args[1]} a number between 1-5?`)
 			};
 			return message.reply(`\n**DEFCON** level set to DEFCON ${args[1]}\nGod Bless their souls`)
 		};
