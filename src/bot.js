@@ -26,6 +26,14 @@ client.on("guildCreate", guild => {
   client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 
+client.on('guildMemberAdd', member => {
+	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
+  	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+});
+client.on('guildMemberRemove', member => {
+	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
+  	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+});
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
