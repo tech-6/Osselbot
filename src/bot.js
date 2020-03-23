@@ -261,7 +261,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(48);
+  		max = Math.floor(58);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -311,8 +311,18 @@ client.on("message", async message => {
 		'<Triple> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s over-under. I\'m so distressed right now I don\'t know what to do. I didn\'t mean to literally shoosh my MooM but i\'m literally in shlock from the self-quarantining of Iran\'s health minister. This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n me',
 		'<Sara Mist> Really? Right in front of my General Ts\'s?',
 		'<Rangern\'t> Holy ShihS. My MoM came into my RooR to bring me a PlalP of Chairman Mao\'s Testicles and I literally shot her with my dad\'s sawed-off 14 gauge shotgun. I\'m so distressertsid rigir now I don\'t know what to do. I didn\'t mean to literetil shoosh my MooM but i\'m literally in shlocc from the  This can\'t be happening. I\'m having a brain aneurysm. This is so FuuF.\n\n\n\n\n\n me',
-		'<Jordan :b:. Peterson> We need to form a gamer ethno-state to secure the future for the next generations.'
-
+		'<Jordan :b:. Peterson> We need to form a gamer ethno-state to secure the future for the next generations.',
+		'<teamrocketsam4> I\'m sorry I pissed in your cereal, please stop.',
+		'<C/Tsgt War Crimes> incoherent jibberish',
+		'<Sergeant kot> his name is homer simpson',
+		'<Obama> It\'s my way or the Huawei',
+		'<Triple> Different strokes for different folks, and these here folks, might\'ve had strokes.',
+		'<Triple> Little Einsteins is the fakest TV show ive ever seen, nothing in it makes sense. Can somebody explain how a bunch of toddlers who are barely preschool age are able fly a rocket ship everywhere they want whenever they want? First off, their rocket is not under production by any company, meaning they would need to actually build the rocket plane themselves, which requires information the children have never even had access to. Not only that, but they actually need to acquire the tools and machinery necessary to manufacture the rocket plane, and they would need college level aeronautical engineering knowledge to fabricate the external shell. Nevermind also needing adequate electrical and interior design knowledge, as well as good structural engineering to merely build a functioning rocket plane, all of which I am fairly certain these babies arent even qualified to have. Next up, if they even manage to actually build the stupid thing, how do they manage to pay for the operating costs? Fuel, maitenance, and licensing costs are only going to destroy their nonexistent funds. Do they use their mommy\'s credit card? Are they actually forcing their parents into debt? Next up, who flies the rocket? Manual flying is required because fully automated flying is only becoming a reality now, and the Little Einsteins had their ship since 2005. Nevermind are these kids nowhere close to old enough to achieve a pilot license, the more worrying part is wondering if they are flying without any aviation knowledge or are they using a pilot license from one of their parents? Multiple federal felonies are happening thus far into the TV show. Last but not least, their rocket plane would need to be given FAA go-ahead to actually fly, and I really dont think the FAA will clear a plane made by some 4 year olds. Just take some time to think about this, and when youre ready feel free to call Child Protective Services.',
+		'<Triple> That isn‘t my quote you dumb fuck',
+		'<Triple> Bruh did you even read the boot chat?',
+		'<AviaDarius> What\'s a zoomie',
+		'<N29UB> ENDLESS SIMP IS BACK AT CIVILIANS ALL PARTYING',
+		'<Anakin Skywalker> We live in a Republic.'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
