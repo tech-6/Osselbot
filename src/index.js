@@ -44,8 +44,8 @@ client.on("message", async message => {
 
 	//people are assholes so this blocks it!
 	if(message.content.toLowerCase().includes('nigger',"nigga","niglet","nigglet")){
-		message.member.addRole('654366653093642241').catch(console.error);
-	      message.member.removeRole('514254335425773589').catch(console.error);
+		message.member.roles.add('654366653093642241').catch(console.error);
+	      message.member.roles.remove('514254335425773589').catch(console.error);
 		console.log(`${message.member} has been detained`)
 		return message.reply('Member has been D E T A I N E D <:yikes:632660765878255636>')
 	}
@@ -165,8 +165,8 @@ client.on("message", async message => {
     if(!member)
       return message.reply("Please mention a valid member of this server");
 	else {
-		member.addRole('654366653093642241').catch(console.error);
-	      member.removeRole('514254335425773589').catch(console.error);
+		member.roles.add('654366653093642241').catch(console.error);
+	      member.roles.remove('514254335425773589').catch(console.error);
 		return message.reply("Member has been D E T A I N E D<:yikes:632660765878255636>\n**DEFCON** level increased\nGod Bless their souls")
 	}
   }
@@ -179,8 +179,8 @@ client.on("message", async message => {
     if(!member)
       return message.reply("Please mention a valid member of this server");
 	else {
-		member.addRole('514254335425773589').catch(console.error);
-	      member.removeRole('654366653093642241').catch(console.error);
+		member.roles.add('514254335425773589').catch(console.error);
+	      member.roles.remove('654366653093642241').catch(console.error);
 		return message.reply("Member has been R E T A I N E D <:MilkTurtle:628399622678773760>")
 	}
   }
@@ -229,22 +229,22 @@ client.on("message", async message => {
 			switch(args[1]) {
 				case 5:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 5`);
-					member.addRole(role);
+					member.roles.add(role);
 				break;
 				case 4:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 4`);
-					member.addRole(role);
+					member.roles.add(role);
 			    	break;
 			  	case 3:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 3`);
-			  		member.addRole(role);
+			  		member.roles.add(role);
 			  	case 2:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 2`);
-					member.addRole(role);
+					member.roles.add(role);
 			    	break;
 			  	case 1:
 					var role = message.guild.roles.find(role => role.name === `DEFCON 1`);
-					member.addRole(role);
+					member.roles.add(role);
 			    	break;
 			};
 			return message.reply("\n**DEFCON** level set!\nGod Bless their souls")
