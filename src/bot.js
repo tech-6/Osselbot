@@ -226,7 +226,7 @@ client.on("message", async message => {
 		else {
 			let member = message.mentions.members.first();
 			var role = "";
-			switch(args[1]) {
+			switch(parseInt(args[1],10)) {
 				case 5:
 					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 5`);
 					member.roles.add(role);
