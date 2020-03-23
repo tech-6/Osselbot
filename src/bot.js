@@ -17,7 +17,7 @@ client.on("ready", () => {
 	  console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 	  // Example of changing the bot's playing game to something useful. `client.user` is what the
 	  // docs refer to as the "ClientUser".
-  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+	  client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 
 client.on("guildCreate", guild => {
@@ -67,7 +67,7 @@ client.on("message", async message => {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     	const m = await message.channel.send("Ping?");
-    	m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+    	m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${WebSocketManager.ping}ms`);
   	}
 
   	if(command === "say") {
