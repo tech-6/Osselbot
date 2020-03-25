@@ -27,8 +27,8 @@ client.on("guildCreate", guild => {
 
 client.on('guildMemberAdd', member => {
 	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
+	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
-  	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 client.on('guildMemberRemove', member => {
 	console.log(` member left: ${member.name} (id: ${member.id}).`);
   	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
