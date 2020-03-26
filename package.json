@@ -1,0 +1,23 @@
+{
+  "name": "osselbot",
+  "version": "1.0.0",
+  "description": "Discordbot on Discord.js",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Technicolor-creamsicle/Osselbot.git"
+  },
+  "author": "Alex Technicolor <technicolor@2a03.party> (http://technicolor.2a03.party)",
+  "license": "SEE LICENSE IN LICENCE",
+  "bugs": {
+    "url": "https://github.com/Technicolor-creamsicle/Osselbot/issues"
+  },
+  "homepage": "https://github.com/Technicolor-creamsicle/Osselbot#readme"
+}
