@@ -7,5 +7,6 @@ npm upgrade discord.js
 cd /home/tech1/Osselbot/
 git pull --force
 #Starts the bot
+cd ./src
 echo "STARTING"
-node ./src/index.js
+node index.js
