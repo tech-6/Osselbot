@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Load up the discord.js library
 const Discord = require("discord.js");
+const prettyMilliseconds = require('pretty-ms');
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -24,7 +25,6 @@ client.on("guildCreate", guild => {
 	console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
-
 client.on('guildMemberAdd', member => {
 	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
@@ -93,7 +93,6 @@ client.on("message", async message => {
 			return message.channel.send("Im sorry but we cant have nice things...")
 		}
 	}
-
 	if(command === "kick") {
 	  	// This command must be limited to mods and admins. In this example we just hardcode the role names.
     		// Please read on Array.some() to understand this bit:
@@ -120,7 +119,6 @@ client.on("message", async message => {
       	.catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
     		message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
   }
-
 	if(command === "ban") {
     		// Most of this command is identical to kick, except that here we'll only let admins do it.
     		// In the real world mods could ban too, but this is just an example, right? ;)
@@ -140,8 +138,7 @@ client.on("message", async message => {
       .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
     message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
   }
-
-  if(command === "purge") {
+  	if(command === "purge") {
   //Vibe check
 	  if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
 	  return message.reply("Sorry, you don't have permissions to use this!");
@@ -160,8 +157,7 @@ client.on("message", async message => {
 			  .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
 	  }
   };
-
-  if(command === "detain") {
+  	if(command === "detain") {
     //For Civilians all partying
     if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
@@ -175,7 +171,7 @@ client.on("message", async message => {
 		return message.reply("Member has been D E T A I N E D<:yikes:632660765878255636>\n**DEFCON** level increased\nGod Bless their souls")
 	}
   }
-  if(command === "retain") {
+  	if(command === "retain") {
     //For Civilians all partying
     if(!message.member.roles.cache.some(r=>["Admin","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
@@ -222,6 +218,18 @@ client.on("message", async message => {
 	};
 	if(command === "magic") {
 		return message.channel.send("Do you believe in magic in a young girl\'s heart\nHow the music can free her, whenever it starts\nAnd it\'s magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI\'ll tell you about the magic, and it\'ll free your soul\nBut it\'s like trying to tell a stranger bout \'rock and roll\'")
+	}
+	if(command === "simp") {
+		if(!message.member.roles.cache.some(r=>["Admin", "Moderator","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
+	return message.reply("Sorry, you don't have permissions to use this!");
+		let embed = new Discord.MessageEmbed()
+			.setTitle("SIMP Alert")
+			.setURL("https://www.youtube.com/watch?v=c3m4Q07TkMk")
+			.setColor(0x195080)
+			.setDescription("__**ALERT**__ SIMP detected!")
+			.setImage("https://vignette.wikia.nocookie.net/disney/images/6/64/Kronk_.jpg/revision/latest?cb=20160720194635")
+			.setTimestamp()
+		message.channel.send({embed})
 	}
 	//DEFCON Roles
 	if(command === "defcon") {
@@ -332,6 +340,18 @@ client.on("message", async message => {
 		};
 		return;
 	};
+	if (command === "stats") {
+		let embed = new Discord.MessageEmbed()
+		.setTitle('Stats')
+		.setColor(0x195080)
+		.setDescription(`\
+**Stats for 0SSELB0T** \n \
+**Uptime:** ${prettyMilliseconds(client.uptime)} \n \
+**Started at:** ${client.readyAt} \n \
+**People:** ${client.users.cache.size}\
+`);
+	return message.channel.send(embed)
+	}
 });
 
 client.login(config.token)
