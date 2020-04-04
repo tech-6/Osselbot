@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 echo "Updating"
 #Update Node Based stuff
+cd ~/Osselbot/
 n stable
 npm upgrade
 #update code
-cd /home/tech1/Osselbot/
 git pull --force
 #Starts the bot
 cd ./src
