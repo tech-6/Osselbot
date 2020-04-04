@@ -2,7 +2,7 @@
 echo "Updating"
 #Update Node Based stuff
 n stable
-npm upgrade discord.js
+npm upgrade
 #update code
 cd /home/tech1/Osselbot/
 git pull --force
