@@ -268,7 +268,7 @@ client.on("message", async message => {
 	};
 	if (command === "quote") {
 		min = Math.ceil(0);
-  		max = Math.floor(58);
+  		max = Math.floor(66);
 		// Quote format '<USER> quote stuff like egg eegg egg mommmmy'
 		let quotes = [
 		'<Airman, hydrated> Im a segregationist',
@@ -329,7 +329,15 @@ client.on("message", async message => {
 		'<Triple> Bruh did you even read the boot chat?',
 		'<AviaDarius> What\'s a zoomie',
 		'<N29UB> ENDLESS SIMP IS BACK AT CIVILIANS ALL PARTYING',
-		'<Anakin Skywalker> We live in a Republic.'
+		'<Anakin Skywalker> We live in a Republic.',
+		'<Echo Wiskey> Do you know how to keep your booger picker off the bang bang lever???',
+		'<McCall> that\'s why we have evaluators\n<Darius> what are those',
+		'<brzęczyszczykiewicz> bravo 6 going boog',
+		'<Candice 2> cute doesnt win the war kid',
+		'<N29UB> you should play the George Lopez theme as you torture Gavin Newsom',
+		'<Sierra> In this world, either you crank dat soulja boy or this world cranks you',
+		'<The Director> Im going to be honest with  with you, im kinda retarded',
+		'<The Director> You dont have my consent, but I know you will do it anyways.'
 		]
 		let number = Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
   		return message.channel.send(quotes[number])
