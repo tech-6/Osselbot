@@ -4,6 +4,7 @@ Description="Osselbot coded for civilians all partying"
 [Service]
 ExecStart=/home/pi/Osselbot/src/bot-start.sh
 Restart=always
+RestartSec=3
 User=pi
 # Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
 Group=nogroup
