@@ -355,7 +355,7 @@ client.on("message", async message => {
 	if (command === "reboot"){
 		function shutdown(){
 			client.destroy();
-			process.exit(0);
+			process.exit(69);
 			}
 		if (message.author.id === '258325046869622785' || '216042720047661057') {
 			message.reply("**Authenticated**, Restarting now.");

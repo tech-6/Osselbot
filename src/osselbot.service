@@ -2,14 +2,16 @@
 Description="Osselbot coded for civilians all partying"
 
 [Service]
-ExecStart=/home/pi/Osselbot/src/bot-start.sh
-Restart=always
-User=pi
+Type=simple
+ExecStart=/home/ceasharks/github/Osselbot/src/bot-start.sh
+Restart=on-failure
+RestartSec=5s
+User=root
 # Note Debian/Ubuntu uses 'nogroup', RHEL/Fedora uses 'nobody'
-Group=nogroup
+Group=root
 Environment=PATH=/usr/bin:/usr/local/bin
 Environment=NODE_ENV=production
-WorkingDirectory=/home/pi/Osselbot/src/
+WorkingDirectory=/home/ceasharks/github/Osselbot/src/
 
 [Install]
 WantedBy=multi-user.target

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Updating"
 #Update Node Based stuff
-cd /home/pi/Osselbot/
+cd /home/ceasharks/github/Osselbot/
 n stable
 npm upgrade
 #update code
