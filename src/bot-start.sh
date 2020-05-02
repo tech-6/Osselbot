@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 echo "Updating"
 #Update Node Based stuff
-cd /home/ceasharks/github/Osselbot/
-n stable
+cd /home/ec2-user/github/Osselbot/
+nvm node
 npm upgrade
 #update code
 git pull --force
