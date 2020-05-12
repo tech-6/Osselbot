@@ -22,10 +22,19 @@ client.on('guildMemberRemove', member => {
   	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
 });
 ////// ACTUAL MESSAGE PROCESSING
+client.on("message", async message => {
+//stops bots from activating the Osselbot
+if(message.author.bot) return;
+//Bad people blocker **NEEDS TO REVISE DETAIN SCRIPT**
+if(message.content.toLowerCase().includes('nigger',"nigga","niglet","nigglet")){
+  message.member.roles.add('654366653093642241').catch(console.error);
+      message.member.roles.remove('514254335425773589').catch(console.error);
+  console.log(`${message.member} has been detained`)
+  return message.reply('Member has been D E T A I N E D <:yikes:632660765878255636>')
+}
 
 
-
-
+}
 
 //Logging in the bot
 client.login(config.token)
