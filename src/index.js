@@ -1,11 +1,4 @@
-#!/usr/bin/env node
-// Load up the discord.js library
-const Discord = require("discord.js");
-const prettyMilliseconds = require('pretty-ms');
-// This is your client. Some people call it `bot`, some people call it `self`,
-// some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
-// this is what we're refering to. Your client.
-const client = new Discord.Client();
+
 
 // Here we load the config.json file that contains our token and our prefix values.
 const config = require("./config.json");
@@ -13,18 +6,7 @@ const config = require("./config.json");
 // config.prefix contains the message prefix.
 
 //Activity setting
-client.on("ready", () => {
-	// This event will run if the bot starts, and logs in, successfully.
-	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-	// Example of changing the bot's playing game to something useful. `client.user` is what the
-	// docs refer to as the "ClientUser".
-	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
-});
-client.on("guildCreate", guild => {
-	// This event triggers when the bot joins a guild.
-	console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
-});
+
 client.on('guildMemberAdd', member => {
 	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
@@ -365,7 +347,7 @@ client.on("message", async message => {
 			client.destroy();
 			process.exit(69);
 			}
-		if (message.author.id === '258325046869622785' || '216042720047661057') {
+		if (message.author.id === '216042720047661057') {
 			message.reply("**Authenticated**, Restarting now.");
 			client.user.setActivity(`Itself die`,{ type: 'WATCHING' });
 			setTimeout(shutdown, 5000, 'shutdown');
