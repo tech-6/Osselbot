@@ -23,18 +23,39 @@ client.on('guildMemberRemove', member => {
 });
 ////// ACTUAL MESSAGE PROCESSING
 client.on("message", async message => {
-//stops bots from activating the Osselbot
-if(message.author.bot) return;
-//Bad people blocker **NEEDS TO REVISE DETAIN SCRIPT**
-if(message.content.toLowerCase().includes('nigger',"nigga","niglet","nigglet")){
-  message.member.roles.add('654366653093642241').catch(console.error);
-      message.member.roles.remove('514254335425773589').catch(console.error);
-  console.log(`${message.member} has been detained`)
-  return message.reply('Member has been D E T A I N E D <:yikes:632660765878255636>')
-}
+	//stops bots from activating the Osselbot
+	//Message processing
+	if(message.author.bot) return;
+	if(message.content.indexOf(config.prefix) !== 0) return;
+	// Here we separate our "command" name, and our "arguments" for the command.
+  // e.g. if we have the message "+say Is this the real life?" , we'll get the following:
+  // command = say
+  // args = ["Is", "this", "the", "real", "life?"]
+  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+	//////////////////////////////////////////////////////////////////////////////
+	//COMMAND TIME
+	//////////////////////////////////////////////////////////////////////////////
+	if (command === "reboot"){
+		function shutdown(){
+			client.destroy();
+			process.exit(69);
+			}
+		if (message.author.id === '216042720047661057') {
+			message.reply("**Authenticated**, Restarting now.");
+			client.user.setActivity(`Itself die`,{ type: 'WATCHING' });
+			setTimeout(shutdown, 5000, 'shutdown');
+		}
+		else {
+			return message.reply("No");
+		};
+	//////////////////////////////////////////////////////////////////////////////
 
 
-}
+	};
+
+
+});
 
 //Logging in the bot
 client.login(config.token)
