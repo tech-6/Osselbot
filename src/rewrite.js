@@ -49,11 +49,22 @@ client.on("message", async message => {
 		else {
 			return message.reply("No");
 		};
-	//////////////////////////////////////////////////////////////////////////////
-
-
 	};
-
+	//////////////////////////////////////////////////////////////////////////////
+	if (command === "stats") {
+		let embed = new Discord.MessageEmbed()
+		.setTitle('Stats')
+		.setColor(0x195080)
+		.setDescription(`\
+**Stats for 0SSELB0T** \n \
+**Uptime:** ${prettyMilliseconds(client.uptime)} \n \
+**Started at:** ${client.readyAt} \n \
+**People:** ${client.users.cache.size}\
+`);
+		return message.channel.send(embed);
+	};
+	//////////////////////////////////////////////////////////////////////////////
+	
 
 });
 
