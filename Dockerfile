@@ -6,7 +6,7 @@ WORKDIR ./DOCKER
 
 # Copy the file from your host to your current location.
 COPY ./package.json .
-
+COPY ./package-lock.json .
 # Run the command inside your image filesystem.
 RUN npm install
 
@@ -14,5 +14,4 @@ RUN npm install
 CMD [ "npm", "start" ]
 
 # Copy the rest of your app's source code from your host to your image filesystem.
-COPY ../src/index.js .
-COPY ../src/config.json .
+COPY ./src/ .
