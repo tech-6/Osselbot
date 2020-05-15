@@ -1,29 +1,32 @@
 {
-  "name": "@technicolor-creamsicle/osselbot",
-  "version": "2.0.2",
-  "description": "A discord bot on Discord.js",
-  "main": "index.js",
-  "dependencies": {
-    "discord.js": "^12.1.1",
-    "n": "^6.4.0",
-    "pretty-ms": "^6.0.1"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install; node ./src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Technicolor-creamsicle/Osselbot.git"
-  },
-  "author": "Alex Technicolor <technicolor@2a03.party> (http://technicolor.2a03.party)",
-  "license": "SEE LICENSE IN LICENCE",
-  "bugs": {
-    "url": "https://github.com/Technicolor-creamsicle/Osselbot/issues"
-  },
-  "homepage": "https://technicolor.2a03.party/bot"
+	"name": "@technicolor-creamsicle/osselbot",
+	"version": "2.0.2-alpha",
+	"description": "A discord bot on Discord.js",
+	"main": "index.js",
+	"dependencies": {
+		"discord.js": "^12.1.1",
+		"n": "^6.4.0",
+		"pretty-ms": "^6.0.1"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
+	},
+	"files": [
+		"./src"
+	],
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "npm install; node ./src/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Technicolor-creamsicle/Osselbot.git"
+	},
+	"author": "Alex Technicolor <technicolor@2a03.party> (http://technicolor.2a03.party)",
+	"license": "SEE LICENSE IN LICENCE",
+	"bugs": {
+		"url": "https://github.com/Technicolor-creamsicle/Osselbot/issues"
+	},
+	"homepage": "https://technicolor.2a03.party/bot"
 }
