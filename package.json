@@ -1,6 +1,6 @@
 {
 	"name": "@technicolor-creamsicle/osselbot",
-	"version": "2.0.2-alpha",
+	"version": "2.0.2",
 	"description": "A discord bot on Discord.js",
 	"main": "index.js",
 	"dependencies": {
@@ -12,7 +12,7 @@
 		"registry": "https://npm.pkg.github.com/"
 	},
 	"files": [
-		"./src"
+		"/src/"
 	],
 	"devDependencies": {},
 	"scripts": {
