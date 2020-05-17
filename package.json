@@ -28,5 +28,6 @@
 	"bugs": {
 		"url": "https://github.com/Technicolor-creamsicle/Osselbot/issues"
 	},
-	"homepage": "https://technicolor.2a03.party/bot"
+	"homepage": "https://technicolor.2a03.party/bot",
+	"bin": "./src/index.js"
 }
