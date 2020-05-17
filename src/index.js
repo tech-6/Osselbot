@@ -152,5 +152,10 @@ client.on("message", async message => {
 	};
 });
 
+if(process.argv.slice(2).includes("--TEST")) {
+	console.log("Test Pass!");
+	process.exit(0);
+};
+
 //Logging in the bot
 client.login(config.token)
