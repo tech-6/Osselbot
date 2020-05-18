@@ -5,22 +5,30 @@ const prettyMilliseconds = require('pretty-ms');
 const config = require("./config.json");
 // This is the client
 const client = new Discord.Client();
+
+function activity() {
+	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+};
+
 client.on("ready", () => {
 	// This event will run if the bot starts, and logs in, successfully.
 	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 	// Example of changing the bot's playing game to something useful. `client.user` is what the
 	// docs refer to as the "ClientUser".
-	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+	activity();
 });
 //Updates people count
 client.on('guildMemberAdd', member => {
 	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
-	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+	activity();
 });
 client.on('guildMemberRemove', member => {
 	console.log(` member left: ${member.name} (id: ${member.id}).`);
-  	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
+  activity();
 });
+
+setInterval(activity, 300000);
+
 ////// ACTUAL MESSAGE PROCESSING
 client.on("message", async message => {
 	//stops bots from activating the Osselbot
@@ -54,13 +62,14 @@ client.on("message", async message => {
 	if (command === "stats") {
 		let embed = new Discord.MessageEmbed()
 		.setTitle('Stats')
+		.setAuthor("Osselbot", "https://cdn.discordapp.com/attachments/597814181084921866/711843993914310656/animated-beach-balls-29.gif")
 		.setColor(0x195080)
 		.setDescription(`\
 **Stats for 0SSELB0T** \n \
 **Uptime:** ${prettyMilliseconds(client.uptime)} \n \
 **Started at:** ${client.readyAt} \n \
-**People:** ${client.users.cache.size}\
-`);
+**People:** ${client.users.cache.size}`)
+.setFooter("osselbot v2.0.4 run version for full info");
 		return message.channel.send(embed);
 	};
 	//////////////////////////////////////////////////////////////////////////////
