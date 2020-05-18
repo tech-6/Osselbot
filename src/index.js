@@ -69,7 +69,7 @@ client.on("message", async message => {
 **Uptime:** ${prettyMilliseconds(client.uptime)} \n \
 **Started at:** ${client.readyAt} \n \
 **People:** ${client.users.cache.size}`)
-.setFooter("osselbot v2.0.4 run version for full info");
+.setFooter("osselbot v2.1.0 run version for full info");
 		return message.channel.send(embed);
 	};
 	//////////////////////////////////////////////////////////////////////////////
@@ -143,7 +143,7 @@ client.on("message", async message => {
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send("``` ________________________________________\n \
-< @technicolor-creamsicle/osselbot@2.0.4 >\n \
+< @technicolor-creamsicle/osselbot@2.1.0 >\n \
  ----------------------------------------\n \
         \\   ^__^\n \
          \\  (oo)\\_______\n \
