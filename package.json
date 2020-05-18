@@ -11,6 +11,9 @@
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com/"
 	},
+	"bin": {
+		"osselbot": "./src/index.js"
+	},
 	"files": [
 		"/src/"
 	],
@@ -28,6 +31,5 @@
 	"bugs": {
 		"url": "https://github.com/Technicolor-creamsicle/Osselbot/issues"
 	},
-	"homepage": "https://technicolor.2a03.party/bot",
-	"bin": "./src/index.js"
+	"homepage": "https://technicolor.2a03.party/bot"
 }
