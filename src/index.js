@@ -114,6 +114,24 @@ client.on("message", async message => {
 		return;
 	};
 ////////////////////////////////////////////////////////////////////////////////
+	if(command === "say") {
+	// makes the bot say something and delete the message. As an example, it's open to anyone to use.
+	// To get the "message" itself we join the `args` back into a string with spaces:
+	const sayMessage = args.join(" ");
+	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){
+		if(sayMessage.includes('@')) {
+		return message.reply("\nStop pinging yourself \nStop pinging yourself");
+	};
+	// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+	message.delete().catch(O_o=>{});
+	// And we get the bot to say the thing:
+	return message.channel.send(sayMessage);
+	};
+		else {
+			return message.channel.send("Im sorry but we cant have nice things...")
+	};
+};
+////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////DEFCON//////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "defcon") {
