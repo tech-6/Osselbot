@@ -126,9 +126,9 @@ client.on("message", async message => {
 	message.delete().catch(O_o=>{});
 	// And we get the bot to say the thing:
 	return message.channel.send(sayMessage);
-	};
+	}
 		else {
-			return message.channel.send("Im sorry but we cant have nice things...")
+		return message.channel.send("Im sorry but we cant have nice things...")
 	};
 };
 ////////////////////////////////////////////////////////////////////////////////
