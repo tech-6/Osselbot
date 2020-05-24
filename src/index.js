@@ -2,15 +2,15 @@
 // Load up the libraries
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
-const config = require("./config.json");
-
+const readline = require('readline');
+const {google} = require('googleapis');
 const fetch = require('isomorphic-fetch');
 
+const TOKEN_PATH = 'token.json';
+const config = require("./config.json");
 // This is making clients
 const client = new Discord.Client();
-const YOUR_ROOT_FOLDER = '1YmJULtf9q1FwY_sZGc8s5WlY2VnfHx1Q',
-    PATH_TO_CREDENTIALS = path.resolve(`./google.json`);
-const creds_service_user = require(PATH_TO_CREDENTIALS);
+
 
 
 function activity() {
@@ -155,7 +155,8 @@ client.on("message", async message => {
 	}
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
-		return message.channel.send("``` ________________________________________\n \
+		return message.channel.send("```\
+ ________________________________________\n \
 < @technicolor-creamsicle/osselbot@2.1.0 >\n \
  ----------------------------------------\n \
         \\   ^__^\n \
