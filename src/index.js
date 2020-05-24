@@ -3,8 +3,15 @@
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
 const config = require("./config.json");
-// This is the client
+
+const fetch = require('isomorphic-fetch');
+
+// This is making clients
 const client = new Discord.Client();
+const YOUR_ROOT_FOLDER = '1YmJULtf9q1FwY_sZGc8s5WlY2VnfHx1Q',
+    PATH_TO_CREDENTIALS = path.resolve(`./google.json`);
+const creds_service_user = require(PATH_TO_CREDENTIALS);
+
 
 function activity() {
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
@@ -141,6 +148,12 @@ client.on("message", async message => {
 		};
 	};
 ////////////////////////////////////////////////////////////////////////////////
+	if(command === "quote") {
+		if(toLowerCase(args[0]) === "add") {
+
+		}
+	}
+////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send("``` ________________________________________\n \
 < @technicolor-creamsicle/osselbot@2.1.0 >\n \
@@ -201,3 +214,6 @@ if(process.argv.slice(2).includes("--TEST")) {
 
 //Logging in the bot
 client.login(config.token)
+const googleDriveInstance = new NodeGoogleDrive({
+        ROOT_FOLDER: YOUR_ROOT_FOLDER
+});
