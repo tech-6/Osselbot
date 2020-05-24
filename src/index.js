@@ -2,9 +2,6 @@
 // Load up the libraries
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
-const readline = require('readline');
-const {google} = require('googleapis');
-const fetch = require('isomorphic-fetch');
 
 //importing files
 const config = require("./config.json");
