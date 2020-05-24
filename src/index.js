@@ -6,7 +6,7 @@ const readline = require('readline');
 const {google} = require('googleapis');
 const fetch = require('isomorphic-fetch');
 
-const TOKEN_PATH = 'token.json';
+//importing files
 const config = require("./config.json");
 // This is making clients
 const client = new Discord.Client();
@@ -150,11 +150,11 @@ client.on("message", async message => {
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
 		if(toLowerCase(args[0]) === "add") {
-      let quote = args.shift()
+      let quote = args.shift();
       const quotes = require('~/.quotes.json');
-      
-		}
-	}
+
+		};
+	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send("```\
