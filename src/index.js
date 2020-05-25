@@ -149,7 +149,7 @@ client.on("message", async message => {
 				if(selector === "add") {
 					args.shift();
 					quoteadd = args;
-	      	quotes.quotes.push(stringify(quoteadd));
+	      	quotes.quotes.push(quoteadd.tostring());
 					fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 					if (err) return message.reply("Something went wrong");
 					client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
@@ -157,9 +157,9 @@ client.on("message", async message => {
 				});
 			};
 		} catch (err) {};
-		var number = quotes.quotes.length() + 1;
+		var number = quotes.quotes.length + 1;
 		let quotesend = Math.floor(Math.random() * (number - 0) + 0);
-		return message.send(`\`\`\`${quotes.quotes[quotesend]}\`\`\``);
+		return message.channel.send(`${quotes.quotes[quotesend]}`);
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
