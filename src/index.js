@@ -2,7 +2,7 @@
 // Load up the libraries
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
-
+const fs = require('fs');
 //importing files
 const config = require("./config.json");
 // This is making clients
@@ -106,7 +106,7 @@ client.on("message", async message => {
 	};
 
 	if(command === "squad") {
-		min = Math.ceil(0);
+			min = Math.ceil(0);
   		max = Math.floor(11);
   		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 		return message.reply(`The squad rates this ${rate} out of 10`);
@@ -146,11 +146,19 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
+		const quotes = require('~/quotes.json');
+		const quoteadd = "";
 		if(toLowerCase(args[0]) === "add") {
-      let quote = args.shift();
-      const quotes = require('~/.quotes.json');
-
+      quoteadd = args.shift();
+      quotes.quotes.push(quoteadd);
+			JSON.stringify(quotes);
+			fs.createWriteStream("~/quotes.json", quotes, {emitClose: "true"});
+			client.channels.get('712084662033580064').send(`${message.member} has submitted ${quote} to the quote repository`);
+			return message.reply("Quote added to repository");
 		};
+		const number = quotes.quotes.length() + 1;
+		let quotesend = Math.floor(Math.random() * (number - 0) + 0);
+		return message.send(`\`\`\`${quotes.quotes[quotesend]}\`\`\``);
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
@@ -214,6 +222,3 @@ if(process.argv.slice(2).includes("--TEST")) {
 
 //Logging in the bot
 client.login(config.token)
-const googleDriveInstance = new NodeGoogleDrive({
-        ROOT_FOLDER: YOUR_ROOT_FOLDER
-});
