@@ -3,6 +3,8 @@
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
 const fs = require('fs');
+const homedir = require('os').homedir;
+const info = require("../package.json")
 //importing files
 const config = require("./config.json");
 // This is making clients
@@ -73,7 +75,7 @@ client.on("message", async message => {
 **Uptime:** ${prettyMilliseconds(client.uptime)} \n \
 **Started at:** ${client.readyAt} \n \
 **People:** ${client.users.cache.size}`)
-.setFooter("osselbot v2.1.0 run version for full info");
+.setFooter(`osselbot v${info.version} run version for full info`);
 		return message.channel.send(embed);
 	};
 	//////////////////////////////////////////////////////////////////////////////
@@ -132,9 +134,6 @@ client.on("message", async message => {
 	// To get the "message" itself we join the `args` back into a string with spaces:
 	const sayMessage = args.join(" ");
 	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){
-		if(sayMessage.includes('@')) {
-		return message.reply("\nStop pinging yourself \nStop pinging yourself");
-	};
 	// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
 	message.delete().catch(O_o=>{});
 	// And we get the bot to say the thing:
@@ -146,14 +145,14 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
-		const quotes = require(`${HOME}/quotes.json`);
+		const quotes = require(`${homedir}/quotes.json`);
 		const quoteadd = "";
-		if(toLowerCase(args[0]) === "add") {
+		if(args[0].toLowerCase() === "add") {
       quoteadd = args.shift();
       quotes.quotes.push(quoteadd);
 			JSON.stringify(quotes);
-			fs.createWriteStream(`${HOME}/quotes.json`, quotes, {emitClose: "true"});
-			client.channels.get('712084662033580064').send(`${message.member} has submitted ${quote} to the quote repository`);
+			fs.createWriteStream(`${homedir}/quotes.json`, quotes, {emitClose: "true"});
+			client.channels.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
 			return message.reply("Quote added to repository");
 		};
 		const number = quotes.quotes.length() + 1;
@@ -162,16 +161,16 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
-		return message.channel.send("```\
+		return message.channel.send(`\`\`\`\
  ________________________________________\n \
-< @technicolor-creamsicle/osselbot@2.1.0 >\n \
+< @technicolor-creamsicle/osselbot@v${info.version}>\n \
  ----------------------------------------\n \
         \\   ^__^\n \
          \\  (oo)\\_______\n \
             (__)\\       )\\/\\\n \
                 ||----w |\n \
                 ||     ||\n \
-```")
+\`\`\``)
 	}
 
 
