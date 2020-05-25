@@ -144,12 +144,12 @@ client.on("message", async message => {
 	if(command === "quote") {
 		let quotes = require(`${homedir}/quotes.json`);
 		var quoteadd = "";
-		let selector = args[0].toLowerCase()
 		try{
+				let selector = args[0].toLowerCase();
 				if(selector === "add") {
 					args.shift();
-					quoteadd = args
-	      	quotes.quotes.push(quoteadd);
+					quoteadd = args;
+	      	quotes.quotes.push(stringify(quotes));
 					fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 					if (err) return message.reply("Something went wrong");
 					client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
