@@ -147,15 +147,16 @@ client.on("message", async message => {
 		let selector = args[0].toLowerCase()
 		try{
 				if(selector === "add") {
-	      quoteadd = args.shift();
-	      quotes.quotes.push(quoteadd);
-				fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
+					args.shift();
+					quoteadd = args
+	      	quotes.quotes.push(quoteadd);
+					fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 					if (err) return message.reply("Something went wrong");
+					client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
+					return message.reply("Quote added to repository");
 				});
-			} catch (error) {};
-			client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
-			return message.reply("Quote added to repository");
-		};
+			};
+		} catch (err) {};
 		var number = quotes.quotes.length() + 1;
 		let quotesend = Math.floor(Math.random() * (number - 0) + 0);
 		return message.send(`\`\`\`${quotes.quotes[quotesend]}\`\`\``);
