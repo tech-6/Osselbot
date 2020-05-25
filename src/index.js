@@ -146,13 +146,13 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
-		const quotes = require('~/quotes.json');
+		const quotes = require(`${HOME}/quotes.json`);
 		const quoteadd = "";
 		if(toLowerCase(args[0]) === "add") {
       quoteadd = args.shift();
       quotes.quotes.push(quoteadd);
 			JSON.stringify(quotes);
-			fs.createWriteStream("~/quotes.json", quotes, {emitClose: "true"});
+			fs.createWriteStream(`${HOME}/quotes.json`, quotes, {emitClose: "true"});
 			client.channels.get('712084662033580064').send(`${message.member} has submitted ${quote} to the quote repository`);
 			return message.reply("Quote added to repository");
 		};
