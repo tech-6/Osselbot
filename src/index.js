@@ -149,7 +149,7 @@ client.on("message", async message => {
 				if(selector === "add") {
 					args.shift();
 					quoteadd = args;
-	      	quotes.quotes.push(stringify(quotes));
+	      	quotes.quotes.push(stringify(quoteadd));
 					fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 					if (err) return message.reply("Something went wrong");
 					client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
