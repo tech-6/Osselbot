@@ -138,24 +138,24 @@ client.on("message", async message => {
 	message.delete().catch(O_o=>{});
 	// And we get the bot to say the thing:
 	return message.channel.send(sayMessage);
-	}
-		else {
-		return message.channel.send("Im sorry but we cant have nice things...")
-		};
+};
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
-		const quotes = require(`${homedir}/quotes.json`);
-		const quoteadd = "";
-		if(args[0].toLowerCase() === "add") {
+		let quotes = require(`${homedir}/quotes.json`);
+		var quoteadd = "";
+		let selector = args[0].toLowerCase()
+		if(selector === "add") {
       quoteadd = args.shift();
       quotes.quotes.push(quoteadd);
 			JSON.stringify(quotes);
-			fs.createWriteStream(`${homedir}/quotes.json`, quotes, {emitClose: "true"});
-			client.channels.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
+			fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
+				return message.reply("Something went wrong");
+			});
+			client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
 			return message.reply("Quote added to repository");
 		};
-		const number = quotes.quotes.length() + 1;
+		var number = quotes.quotes.length() + 1;
 		let quotesend = Math.floor(Math.random() * (number - 0) + 0);
 		return message.send(`\`\`\`${quotes.quotes[quotesend]}\`\`\``);
 	};
