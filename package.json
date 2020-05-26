@@ -20,7 +20,7 @@
 	"devDependencies": {},
 	"scripts": {
 		"test": "node ./src/index --TEST",
-		"start": "npm install; node ./src/index.js"
+		"start": "node ./src/index.js"
 	},
 	"repository": {
 		"type": "git",

@@ -142,24 +142,31 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
-		let quotes = require(`${homedir}/quotes.json`);
+		let quotes = require(`../quotes.json`);
 		var quoteadd = "";
+    var selector;
 		try{
-				let selector = args[0].toLowerCase();
-				if(selector === "add") {
-					args.shift();
-					quoteadd = args;
-	      	quotes.quotes.push(quoteadd.tostring());
-					fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
-					if (err) return message.reply("Something went wrong");
-					client.channels.cache.get('712084662033580064').send(`${message.member} has submitted ${quoteadd} to the quote repository`);
-					return message.reply("Quote added to repository");
+			selector = args[0].toLowerCase();
+    } catch (err) {
+      var number = quotes.quotes.length + 1;
+		  let quotesend = Math.floor(Math.random() * (number - 0) + 0);
+		  return message.channel.send(`${quotes.quotes[quotesend]}`);
+      };
+			if(selector === "add") {
+				args.shift();
+				quoteadd = args;
+              quoteadd = quoteadd.toString();
+              quoteadd = quoteadd.replace(/,/g, " ");
+              quoteadd = quoteadd.replace(/  /g, ", ");                quotes.quotes.push(quoteadd.toString());
+				fs.writeFile(`../quotes.json`, JSON.stringify(quotes), (err) => {
+				if (err) return message.reply("Something went wrong");``
+				client.channels.cache.get('712084662033580064').send(`${message.member} has submitted \`${quoteadd}\` to the quote repository`);
+				return message.reply("Quote added to repository");
 				});
-			};
-		} catch (err) {};
-		var number = quotes.quotes.length + 1;
-		let quotesend = Math.floor(Math.random() * (number - 0) + 0);
-		return message.channel.send(`${quotes.quotes[quotesend]}`);
+			}
+    	else {
+        return message.reply("you can add quotes by running `?quote add <person> Quote goes here`");
+    	};
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
