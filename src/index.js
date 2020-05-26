@@ -168,6 +168,7 @@ client.on("message", async message => {
     	else {
         return message.reply("you can add quotes by running `?quote add <person> Quote goes here`");
     	};
+		};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send(`\`\`\`\
@@ -180,7 +181,7 @@ client.on("message", async message => {
                 ||----w |\n \
                 ||     ||\n \
 \`\`\``)
-	}
+};
 
 
 
