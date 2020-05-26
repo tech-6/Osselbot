@@ -157,10 +157,6 @@ client.on("message", async message => {
 				args.shift();
 				//This does logic to make it from an array to a nice string.
 				quoteadd = args.join(' ');
-        //quoteadd = quoteadd.toString();
-        //quoteadd = quoteadd.replace(/,/g, " ");
-        //quoteadd = quoteadd.replace(/  /g, ", ");
-				//quotes.quotes.push(quoteadd.toString());
 				quotes.quotes.push(quoteadd)
 				fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 				if (err) return message.reply("Something went wrong");``
