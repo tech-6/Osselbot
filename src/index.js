@@ -142,10 +142,10 @@ client.on("message", async message => {
 	};
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
+
 		let quotes = require(`${homedir}/quotes.json`);
 		var quoteadd = "";
-
-    var selector;
+		var selector;
 		try{
 			selector = args[0].toLowerCase();
     } catch (err) {
@@ -155,11 +155,13 @@ client.on("message", async message => {
       };
 			if(selector === "add") {
 				args.shift();
-				quoteadd = args;
-              quoteadd = quoteadd.toString();
-              quoteadd = quoteadd.replace(/,/g, " ");
-              quoteadd = quoteadd.replace(/  /g, ", ");
-							quotes.quotes.push(quoteadd.toString());
+				//This does logic to make it from an array to a nice string.
+				quoteadd = args.join(' ');
+        //quoteadd = quoteadd.toString();
+        //quoteadd = quoteadd.replace(/,/g, " ");
+        //quoteadd = quoteadd.replace(/  /g, ", ");
+				//quotes.quotes.push(quoteadd.toString());
+				quotes.quotes.push(quoteadd)
 				fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
 				if (err) return message.reply("Something went wrong");``
 				client.channels.cache.get('712084662033580064').send(`${message.member} has submitted \`${quoteadd}\` to the quote repository`);
