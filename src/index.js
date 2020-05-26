@@ -144,6 +144,7 @@ client.on("message", async message => {
 	if(command === "quote") {
 		let quotes = require(`../quotes.json`);
 		var quoteadd = "";
+
     var selector;
 		try{
 			selector = args[0].toLowerCase();
@@ -167,7 +168,6 @@ client.on("message", async message => {
     	else {
         return message.reply("you can add quotes by running `?quote add <person> Quote goes here`");
     	};
-	};
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send(`\`\`\`\
