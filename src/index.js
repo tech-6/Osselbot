@@ -133,13 +133,13 @@ client.on("message", async message => {
 	// makes the bot say something and delete the message. As an example, it's open to anyone to use.
 	// To get the "message" itself we join the `args` back into a string with spaces:
 	const sayMessage = args.join(" ");
-	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){
+	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){}
 	// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
 	message.delete().catch(O_o=>{});
 	// And we get the bot to say the thing:
 	return message.channel.send(sayMessage);
-};
 	};
+
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
 
@@ -154,7 +154,7 @@ client.on("message", async message => {
 		  return message.channel.send(`${quotes.quotes[quotesend]}`);
       };
 			if(selector === "add") {
-				if (message.member.roles.cache.some(r => ["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name))) return message.reply("Ask someone with the quote role to add that.")
+				if (!(message.member.roles.cache.some(r => ["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)))) return message.reply("Ask someone with the quote role to add that.")
 				args.shift();
 				//This does logic to make it from an array to a nice string.
 				quoteadd = args.join(' ');
