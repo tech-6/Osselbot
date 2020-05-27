@@ -9,8 +9,9 @@ const info = require("../package.json")
 const config = require("./config.json");
 // This is making clients
 const client = new Discord.Client();
-
-
+//THIS BOT IS FOR DEVELOPMENT USE ONLY!
+//WATCH OUT ON PULL REQUESTS
+//CONTACT ALEX BEFORE MERGES
 
 function activity() {
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
