@@ -154,11 +154,12 @@ client.on("message", async message => {
 		  return message.channel.send(`${quotes.quotes[quotesend]}`);
       };
 			if(selector === "add") {
+				if (message.member.roles.cache.some(r => ["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name))) return message.reply("Ask someone with the quote role to add that.")
 				args.shift();
 				//This does logic to make it from an array to a nice string.
 				quoteadd = args.join(' ');
 				quotes.quotes.push(quoteadd)
-				fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes), (err) => {
+				fs.writeFile(`${homedir}/quotes.json`, JSON.stringify(quotes, null, 2), (err) => {
 				if (err) return message.reply("Something went wrong");``
 				client.channels.cache.get('712084662033580064').send(`${message.member} has submitted \`${quoteadd}\` to the quote repository`);
 				return message.reply("Quote added to repository");
