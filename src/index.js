@@ -39,6 +39,13 @@ setInterval(activity, 300000);
 client.on("message", async message => {
 	//stops bots from activating the Osselbot
 	//Message processing
+
+	if(message.content.toLowerCase().includes('nigg',"niglet","negro","fag","f4g","n1gg","gg3r")) {
+		message.delete();
+		return message.reply(`Listen here cum-sock we dont appeciate that here ${message.member}. If you gonna be like that you may just well end up in the JAR and we all know how that ends...`)
+	}
+
+
 	if(message.author.bot) return;
 	if(message.content.indexOf(config.prefix) !== 0) return;
 	// Here we separate our "command" name, and our "arguments" for the command.
