@@ -12,29 +12,14 @@ const client = new Discord.Client();
 //THIS BOT IS FOR DEVELOPMENT USE ONLY!
 //WATCH OUT ON PULL REQUESTS
 //CONTACT ALEX BEFORE MERGES
-
-function activity() {
-	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
-};
+client.user.setStatus('dnd', '0SSELB0T DEVELOPMENT')
 
 client.on("ready", () => {
 	// This event will run if the bot starts, and logs in, successfully.
 	console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
 	// Example of changing the bot's playing game to something useful. `client.user` is what the
 	// docs refer to as the "ClientUser".
-	activity();
 });
-//Updates people count
-client.on('guildMemberAdd', member => {
-	console.log(`New member joined: ${member.name} (id: ${member.id}).`);
-	activity();
-});
-client.on('guildMemberRemove', member => {
-	console.log(` member left: ${member.name} (id: ${member.id}).`);
-  activity();
-});
-
-setInterval(activity, 300000);
 
 ////// ACTUAL MESSAGE PROCESSING
 client.on("message", async message => {
