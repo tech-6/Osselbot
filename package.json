@@ -1,6 +1,6 @@
 {
 	"name": "@technicolor-creamsicle/osselbot",
-	"version": "2.1.0",
+	"version": "2.1.2",
 	"description": "A discord bot on Discord.js",
 	"main": "index.js",
 	"dependencies": {
