@@ -74,7 +74,7 @@ client.on("message", async message => {
 	//////////////////////////////////////////////////////////////////////////////
 	if (command === "stats") {
 		let embed = new Discord.MessageEmbed()
-		.setTitle('Stats');
+		.setTitle('Stats')
 		.setAuthor("Osselbot", "https://cdn.discordapp.com/attachments/597814181084921866/711843993914310656/animated-beach-balls-29.gif")
 		.setColor(0x195080)
 		.setDescription(`\
