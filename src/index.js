@@ -215,4 +215,4 @@ if(process.argv.slice(2).includes("--TEST")) {
 };
 
 //Logging in the bot
-client.login(config.token)
+client.login(config.token);
