@@ -19,7 +19,7 @@
 	],
 	"devDependencies": {},
 	"scripts": {
-		"test": "node ./src/index --TEST",
+		"test": "node --tracewarnings ./src/index --TEST",
 		"start": "node ./src/index.js"
 	},
 	"repository": {
