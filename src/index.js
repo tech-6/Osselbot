@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-inner-declarations */
 // Load up the libraries
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
@@ -14,7 +16,7 @@ const client = new Discord.Client();
 
 function activity() {
 	client.user.setActivity(`${client.users.cache.size} of you horrible people`,{ type: 'LISTENING' });
-};
+}
 
 client.on("ready", () => {
 	// This event will run if the bot starts, and logs in, successfully.
@@ -69,8 +71,8 @@ client.on("message", async message => {
 		}
 		else {
 			return message.reply("No");
-		};
-	};
+		}
+	}
 	//////////////////////////////////////////////////////////////////////////////
 	if (command === "stats") {
 		let embed = new Discord.MessageEmbed()
@@ -84,22 +86,22 @@ client.on("message", async message => {
 **People:** ${client.users.cache.size}`)
 .setFooter(`osselbot v${info.version} run version for full info`);
 		return message.channel.send(embed);
-	};
+	}
 	//////////////////////////////////////////////////////////////////////////////
 	if(command === "ping") {
 	// Calculates ping between sending a message and editing it, giving a nice round-trip latency.
 		const m = await message.channel.send("Ping?");
 		m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms`);
-	};
+	}
 	//////////////////////////////////////////////////////////////////////////////
 	//HOW QUOTEABLE
 	if(command === "psych") {
 		return message.channel.send("Rules for finding a psychopath: \n1. Favorite color is orange \n2. Likes the left burners, worse if its top left\n3. Calls pizza sauce/tomato sauce gravy\n4. Doesnt like salad\n5. Likes country music\n6. Makes hot chocolate with water\n7. Likes black licorice")
-	};
+	}
 
 	if(command === "ask") {
 		return message.channel.send("Dont Ask, Just ask!\n https://iki.fi/sol/dontask.html")
-	};
+	}
 
 	if(command === "simp") {
 		if(!message.member.roles.cache.some(r=>["Admin", "Moderator","Member of the Order of the b l u e","Botmeister"].includes(r.name)) )
@@ -112,40 +114,42 @@ client.on("message", async message => {
 			.setImage("https://vignette.wikia.nocookie.net/disney/images/6/64/Kronk_.jpg/revision/latest?cb=20160720194635")
 			.setTimestamp()
 		message.channel.send({embed})
-	};
+	}
 
 	if(command === "squad") {
-			min = Math.ceil(0);
-  		max = Math.floor(11);
-  		let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+			let min = Math.ceil(0);
+		  	let max = Math.floor(11);
+		  	let rate = Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 		return message.reply(`The squad rates this ${rate} out of 10`);
-	};
+	}
 
 	if(command === "magic") {
-		return message.channel.send("Do you believe in magic in a young girl\'s heart\nHow the music can free her, whenever it starts\nAnd it\'s magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI\'ll tell you about the magic, and it\'ll free your soul\nBut it\'s like trying to tell a stranger bout \'rock and roll\'");
-	};
+		return message.channel.send("Do you believe in magic in a young girl's heart\nHow the music can free her, whenever it starts\nAnd it's magic, if the music is groovy\nIt makes you feel happy like an old-time movie\nI'll tell you about the magic, and it'll free your soul\nBut it's like trying to tell a stranger bout 'rock and roll'");
+	}
 
 	if(command === 'help') {
 		return message.reply('https://technicolor.2a03.party/bot/');
-	};
+	}
 
 	if (command === "fix") {
 		if(message.member.roles.cache.some(r=>["Botmeister"].includes(r.name))) {
-		return message.channel.send("I guess it\'s my fault will fix.");
-		};
+		return message.channel.send("I guess it's my fault will fix.");
+		}
 		return;
-	};
+	}
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "say") {
 	// makes the bot say something and delete the message. As an example, it's open to anyone to use.
 	// To get the "message" itself we join the `args` back into a string with spaces:
 	const sayMessage = args.join(" ");
-	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){}
-	// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-	message.delete().catch(O_o=>{});
-	// And we get the bot to say the thing:
-	return message.channel.send(sayMessage);
-	};
+	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){
+		// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+		// eslint-disable-next-line no-unused-vars
+		message.delete().catch(O_o=>{});
+		// And we get the bot to say the thing:
+		return message.channel.send(sayMessage);
+		}
+	}
 
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "quote") {
@@ -159,7 +163,7 @@ client.on("message", async message => {
       var number = quotes.quotes.length + 1;
 		  let quotesend = Math.floor(Math.random() * (number - 0) + 0);
 		  return message.channel.send(`${quotes.quotes[quotesend]}`);
-      };
+      }
 			if(selector === "add") {
 				if (!(message.member.roles.cache.some(r => ["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)))) return message.reply("Ask someone with the quote role to add that.")
 				args.shift();
@@ -174,8 +178,8 @@ client.on("message", async message => {
 			}
     	else {
         return message.reply("you can add quotes by running `?quote add <person> Quote goes here`");
-    	};
-		};
+    	}
+		}
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "version") {
 		return message.channel.send(`\`\`\`\
@@ -188,7 +192,7 @@ client.on("message", async message => {
                 ||----w |\n \
                 ||     ||\n \
 \`\`\``)
-};
+}
 
 
 
@@ -204,37 +208,49 @@ client.on("message", async message => {
 			var role = "";
 			switch(parseInt(args[1],10)) {
 				case 5:
-					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 5`);
+					role = message.guild.roles.cache.find(role => role.name === `DEFCON 5`);
 					member.roles.add(role);
 				break;
 				case 4:
-					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 4`);
+					role = message.guild.roles.cache.find(role => role.name === `DEFCON 4`);
 					member.roles.add(role);
 						break;
 					case 3:
-					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 3`);
+					role = message.guild.roles.cache.find(role => role.name === `DEFCON 3`);
 						member.roles.add(role);
 				break;
 					case 2:
-					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 2`);
+					role = message.guild.roles.cache.find(role => role.name === `DEFCON 2`);
 					member.roles.add(role);
 						break;
 					case 1:
-					var role = message.guild.roles.cache.find(role => role.name === `DEFCON 1`);
+					role = message.guild.roles.cache.find(role => role.name === `DEFCON 1`);
 					member.roles.add(role);
 						break;
 				default:
-					return message.reply(`DEFCON not set is ${args[1]} a number between 1-5?`)
-			};
-			return message.reply(`\n**DEFCON** level set to DEFCON ${args[1]}\nGod Bless their souls`)
-		};
-	};
+					return message.reply(`DEFCON not set is ${args[1]} a number between 1-5?`);
+			}
+			return message.reply(`\n**DEFCON** level set to DEFCON ${args[1]}\nGod Bless their souls`);
+		}
+	}
+//////////////////////////////////////
+/////////Funny DHS is funny///////////
+//////////////////////////////////////
+if (command == "xkcd") {
+	if (!isNaN(args[0])) {
+return
+	}
+}
+
+
+
+
 });
 
 if(process.argv.slice(2).includes("--TEST")) {
 	console.log("Test Pass!");
 	process.exit(0);
-};
+}
 
 //Logging in the bot
 client.login(config.token);
