@@ -238,25 +238,34 @@ client.on("message", async message => {
 /////////Funny DHS is funny///////////
 //////////////////////////////////////
 if (command == "xkcd") {
+	let comic = ""
 	if (!isNaN(args[0])) {
 		fetch(`https://xkcd.com/${args[0]}/info.0.json`)
 		.then(res => res.json())
-		.then(json => let comic = json)
+		.then(json => comic = json)
+		// eslint-disable-next-line no-unused-vars
 		.catch(err => message.reply("Something went wrong... Check your number and try again later."));
 
 		let embed = new Discord.MessageEmbed()
-		.setTitle(`xkcd #${arg[0]}`)
+		.setTitle(`xkcd #${args[0]}`)
 		.setAuthor("Randel Munroe")
 		.setColor(0xffffff)
-		.setDescription(``);
+		.image(`${comic.img}`);
+		return message.channel.send(embed);
+		}
+		fetch(`https://xkcd.com/info.0.json`)
+		.then(res => res.json())
+		.then(json => comic = json)
+		// eslint-disable-next-line no-unused-vars
+		.catch(err => message.reply("Something went wrong... Check your number and try again later."));
+
+		let embed = new Discord.MessageEmbed()
+		.setTitle(`xkcd #${args[0]}`)
+		.setAuthor("Randel Munroe")
+		.setColor(0xffffff)
+		.image(`${comic.img}`);
 		return message.channel.send(embed);
 	}
-	}
-}
-
-
-
-
 });
 
 if(process.argv.slice(2).includes("--TEST")) {
