@@ -6,7 +6,8 @@ const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
 const fs = require('fs');
 const homedir = require('os').homedir;
-const info = require("../package.json")
+const info = require("../package.json");
+const fetch = require('node-fetch');
 //importing files
 const config = require("./config.json");
 // This is making clients
@@ -238,7 +239,18 @@ client.on("message", async message => {
 //////////////////////////////////////
 if (command == "xkcd") {
 	if (!isNaN(args[0])) {
-return
+		fetch(`https://xkcd.com/${args[0]}/info.0.json`)
+		.then(res => res.json())
+		.then(json => let comic = json)
+		.catch(err => message.reply("Something went wrong... Check your number and try again later."));
+
+		let embed = new Discord.MessageEmbed()
+		.setTitle(`xkcd #${arg[0]}`)
+		.setAuthor("Randel Munroe")
+		.setColor(0xffffff)
+		.setDescription(``);
+		return message.channel.send(embed);
+	}
 	}
 }
 
