@@ -243,14 +243,16 @@ if (command == "xkcd") {
 		try {
 			var response = await fetch(`https://xkcd.com/${args[0]}/info.0.json`);
 			comic = await response.text();
+			return comic
 		} catch (e) {
 			console.error(e);
 			return message.reply("Something went wrong... Check your number and try again later.")
 		}
 
 	}
-	
 
+
+	
 	getcomic();
 
 	let embed = new Discord.MessageEmbed()
