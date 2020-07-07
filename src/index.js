@@ -237,30 +237,30 @@ client.on("message", async message => {
 //////////////////////////////////////
 /////////Funny DHS is funny///////////
 //////////////////////////////////////
-if (command == "xkcd") {
-	async function getcomic(args) {
-		var comic
-		try {
-			var response = await fetch(`https://xkcd.com/${args[0]}/info.0.json`);
-			comic = await response.text();
-		} catch (e) {
-			console.error(e);
-			return message.reply("Something went wrong... Check your number and try again later.")
-		}
+// if (command == "xkcd") {
+// 	async function getcomic(args) {
+// 		var comic
+// 		try {
+// 			var response = await fetch(`https://xkcd.com/${args[0]}/info.0.json`);
+// 			comic = await response.text();
+// 		} catch (e) {
+// 			console.error(e);
+// 			return message.reply("Something went wrong... Check your number and try again later.")
+// 		}
 
-	}
+// 	}
 	
 
-	getcomic();
+// 	getcomic();
 
-	let embed = new Discord.MessageEmbed()
-	.setTitle(`xkcd #${comic.num}`)
-	.setAuthor("Randel Munroe")
-	.setColor(0xffffff)
-	.image(`${comic.img}`);
-	return message.channel.send(embed);
+// 	let embed = new Discord.MessageEmbed()
+// 	.setTitle(`xkcd #${comic.num}`)
+// 	.setAuthor("Randel Munroe")
+// 	.setColor(0xffffff)
+// 	.image(`${comic.img}`);
+// 	return message.channel.send(embed);
 		
-	}
+// 	}
 });
 
 if(process.argv.slice(2).includes("--TEST")) {
