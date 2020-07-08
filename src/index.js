@@ -144,11 +144,14 @@ client.on("message", async message => {
 	// To get the "message" itself we join the `args` back into a string with spaces:
 	const sayMessage = args.join(" ");
 	if (message.member.roles.cache.some(r=>["Admin","Mods","Member of the Order","Botmeister","Ally of the Order","say"].includes(r.name)) ){
-		// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
-		// eslint-disable-next-line no-unused-vars
-		message.delete().catch(O_o=>{});
-		// And we get the bot to say the thing:
-		return message.channel.send(sayMessage);
+		if(message.content.includes("@"));{
+			// Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+			// eslint-disable-next-line no-unused-vars
+			message.delete().catch(O_o=>{});
+			// And we get the bot to say the thing:
+			return message.channel.send(sayMessage);
+			
+			}
 		}
 	}
 
