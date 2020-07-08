@@ -132,11 +132,28 @@ client.on("message", async message => {
 		return message.reply('https://technicolor.2a03.party/bot/');
 	}
 
-	if (command === "fix") {
+	if(command === "fix") {
 		if(message.member.roles.cache.some(r=>["Botmeister"].includes(r.name))) {
 		return message.channel.send("I guess it's my fault will fix.");
 		}
 		return;
+	}
+	
+	if(command === "va"){
+		let msg = ""
+		let num = Math.floor(Math.random() * (3 - 1) + 1); //The maximum is exclusive and the minimum is inclusive
+		switch(num){
+			case 1:
+				msg = "its simple, mind over matter. i dont mind, and you dont fucking matter";
+				break;
+			case 2:
+				msg = "I can eat alphabet soup and shit out a more coherent sentence than you";
+				break;
+			case 3:
+				msg = "you are living proof darwinism is dead, hell, even reversing.";
+				break;
+		}
+		return message.reply(`${msg}`)
 	}
 ////////////////////////////////////////////////////////////////////////////////
 	if(command === "say") {
