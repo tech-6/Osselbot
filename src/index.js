@@ -141,7 +141,7 @@ client.on("message", async message => {
 	
 	if(command === "va"){
 		let msg = ""
-		let num = Math.floor(Math.random() * (3 - 1) + 1); //The maximum is exclusive and the minimum is inclusive
+		let num = Math.floor(Math.random() * (5 - 1) + 1); //The maximum is exclusive and the minimum is inclusive
 		switch(num){
 			case 1:
 				msg = "its simple, mind over matter. i dont mind, and you dont fucking matter";
@@ -151,6 +151,9 @@ client.on("message", async message => {
 				break;
 			case 3:
 				msg = "you are living proof darwinism is dead, hell, even reversing.";
+				break;
+			case 4:
+				msg = "may you never reproduce"
 				break;
 		}
 		return message.reply(`${msg}`)
