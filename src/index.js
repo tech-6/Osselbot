@@ -92,7 +92,7 @@ client.on("message", async message => {
 	if(command === "ping") {
 	// Calculates ping between sending a message and editing it, giving a nice round-trip latency.
 		const m = await message.channel.send("Ping?");
-		m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms`);
+		m.edit(`Pong! Latency is ${client.ws.ping}ms`);
 	}
 	//////////////////////////////////////////////////////////////////////////////
 	//HOW QUOTEABLE
