@@ -48,7 +48,7 @@ client.on("message", async message => {
 	//Message processing
 
 	// noinspection SpellCheckingInspection
-	if (message.content.toLowerCase().includes('nigg'||'negro'||'niglet'||'fag'||'f4g'||'n1gg'||'gg3r')) {
+	if (message.content.toLowerCase().includes('nigg' || 'negro' || 'niglet' || 'fag' || 'f4g' || 'n1gg' || 'gg3r')) {
 		await message.delete();
 		return message.reply(`Listen here cum-sock we dont appreciate that here ${message.member}. If you gonna be like that you may just well end up in the JAR and we all know how that ends...`)
 	}
@@ -131,23 +131,8 @@ client.on("message", async message => {
 	}
 
 	if (command === "va") {
-		let msg = ""
-		let num = Math.floor(Math.random() * (5 - 1) + 1); //The maximum is exclusive and the minimum is inclusive
-		switch (num) {
-			case 1:
-				msg = "its simple, mind over matter. i dont mind, and you dont fucking matter";
-				break;
-			case 2:
-				msg = "I can eat alphabet soup and shit out a more coherent sentence than you";
-				break;
-			case 3:
-				msg = "you are living proof darwinism is dead, hell, even reversing.";
-				break;
-			case 4:
-				msg = "may you never reproduce"
-				break;
-		}
-		return message.reply(`${msg}`)
+		let num = Math.floor(Math.random() * (config.abuse.length + 1)); //The maximum is exclusive and the minimum is inclusive
+		return message.reply(`${config.abuse[num]}`)
 	}
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "say") {
@@ -176,12 +161,11 @@ client.on("message", async message => {
 		try {
 			selector = args[0].toLowerCase();
 		} catch (err) {
-			let number = quotes.quotes.length + 1;
-			let quotesend = Math.floor(Math.random() * (number));
+			let number = quotes.quotes.length;
+			let quotesend = Math.floor(Math.random() * (number + 1));
 			return message.channel.send(`${quotes.quotes[quotesend]}`);
 		}
 		if (selector === "add") {
-			if (!(message.member.roles.cache.some(r => ["Admin", "Mods", "Member of the Order", "Botmeister", "Ally of the Order", "say"].includes(r.name)))) return message.reply("Ask someone with a quote role to add that.")
 			args.shift();
 			//This does logic to make it from an array to a nice string.
 			quoteadd = args.join(' ');

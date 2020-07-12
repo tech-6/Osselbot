@@ -3105,9 +3105,9 @@
 			"dev": true
 		},
 		"n": {
-			"version": "6.5.1",
-			"resolved": "https://registry.npmjs.org/n/-/n-6.5.1.tgz",
-			"integrity": "sha512-CSDShHuBlYHfS5PR4BxwkZYNrDnc3B7GCRdAhSvnzl681Pd4Y4qOOTWQqjB8Cp6gYOIQI9qJxLK0Q1YI4xO2Kg=="
+			"version": "6.6.0",
+			"resolved": "https://registry.npmjs.org/n/-/n-6.6.0.tgz",
+			"integrity": "sha512-Yk2z0OQKDCmDyBHltJRg2RsxPsdc2DHcM8fFN21j1rzqior+FifdqhvcbZ+k00EgiSvR6p8+s9whWLwvzSeqcw=="
 		},
 		"nanomatch": {
 			"version": "1.2.13",
