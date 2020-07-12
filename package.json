@@ -22,7 +22,7 @@
     "jest": "^26.1.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "start": "node ./src/index.js"
   },
   "repository": {
