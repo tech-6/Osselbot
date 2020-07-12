@@ -130,7 +130,7 @@ client.on("message", async message => {
 	}
 
 	if (command === "va") {
-		let num = Math.floor(Math.random() * (config.abuse.length + 1)); //The maximum is exclusive and the minimum is inclusive
+		let num = Math.floor(Math.random() * (config.verbalabuse.length + 1)); //The maximum is exclusive and the minimum is inclusive
 		return message.reply(`${config.verbalabuse[num]}`)
 	}
 ////////////////////////////////////////////////////////////////////////////////
