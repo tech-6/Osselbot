@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="closet.technicolor.2a03.party" id="6a813722-88b4-4195-8883-007723ea90cf" port="22" nameFormat="DESCRIPTIVE" username="technicolor" />
+    </configs>
+  </component>
+</project>
