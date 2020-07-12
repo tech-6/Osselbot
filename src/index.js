@@ -10,7 +10,6 @@ const prettyMilliseconds = require('pretty-ms');
 const fs = require('fs');
 const homedir = require('os').homedir;
 const info = require("../package.json");
-// const fetch = require('node-fetch');
 //importing files
 const config = require("./config.json");
 // This is making clients
@@ -132,7 +131,7 @@ client.on("message", async message => {
 
 	if (command === "va") {
 		let num = Math.floor(Math.random() * (config.abuse.length + 1)); //The maximum is exclusive and the minimum is inclusive
-		return message.reply(`${config.abuse[num]}`)
+		return message.reply(`${config.verbalabuse[num]}`)
 	}
 ////////////////////////////////////////////////////////////////////////////////
 	if (command === "say") {
