@@ -181,7 +181,7 @@ client.on("message", async message => {
 			return message.channel.send(`${quotes.quotes[quotesend]}`);
 		}
 		if (selector === "add") {
-			if (!(message.member.roles.cache.some(r => ["Admin", "Mods", "Member of the Order", "Botmeister", "Ally of the Order", "say"].includes(r.name)))) return message.reply("Ask someone with the quote role to add that.")
+			if (!(message.member.roles.cache.some(r => ["Admin", "Mods", "Member of the Order", "Botmeister", "Ally of the Order", "say"].includes(r.name)))) return message.reply("Ask someone with a quote role to add that.")
 			args.shift();
 			//This does logic to make it from an array to a nice string.
 			quoteadd = args.join(' ');
