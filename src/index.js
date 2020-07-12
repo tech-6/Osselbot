@@ -1,4 +1,10 @@
 #!/usr/bin/env node
+//TODO Write tests
+//TODO Make an automation system for deployment
+//TODO Test all commands
+
+//Those are so I remember stuff
+
 // Load up the libraries
 const Discord = require("discord.js");
 const prettyMilliseconds = require('pretty-ms');
@@ -13,7 +19,7 @@ const client = new Discord.Client();
 
 
 function activity() {
-    client.user.setActivity(`${client.users.cache.size} of you horrible people`, {type: 'LISTENING'});
+    client.user.setActivity(`${client.users.cache.size} of you horrible people`, {type: 'LISTENING'}).then(() => {} );
 }
 
 client.on("ready", () => {
@@ -25,11 +31,11 @@ client.on("ready", () => {
 });
 //Updates people count
 client.on('guildMemberAdd', member => {
-    console.log(`New member joined: ${member.name} (id: ${member.id}).`);
+    console.log(`New member joined: ${member.nickname} (id: ${member.id}).`);
     activity();
 });
 client.on('guildMemberRemove', member => {
-    console.log(` member left: ${member.name} (id: ${member.id}).`);
+    console.log(` member left: ${member.nickname} (id: ${member.id}).`);
     activity();
 });
 
@@ -38,10 +44,11 @@ setInterval(activity, 300000);
 ////// ACTUAL MESSAGE PROCESSING
 client.on("message", async message => {
     //stops bots from activating the Osselbot
+
     //Message processing
 
     // noinspection SpellCheckingInspection
-    if (message.content.toLowerCase().includes('nigg', 'niglet', 'negro', 'fag', 'f4g', 'n1gg', 'gg3r')) {
+    if (message.content.toLowerCase().includes('nigg','negro', 'niglet', 'fag', 'f4g', 'n1gg', 'gg3r')) {
         await message.delete();
         return message.reply(`Listen here cum-sock we dont appreciate that here ${message.member}. If you gonna be like that you may just well end up in the JAR and we all know how that ends...`)
     }
@@ -56,7 +63,7 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     //////////////////////////////////////////////////////////////////////////////
-    //COMMAND TIME
+    //////////////////////////////////COMMAND TIME////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////
 
     if (command === "stats") {
@@ -76,10 +83,10 @@ client.on("message", async message => {
     if (command === "ping") {
         // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
         const m = await message.channel.send("Ping?");
-        m.edit(`Pong! Latency is ${client.ws.ping}ms`);
+        await m.edit(`Pong! Latency is ${client.ws.ping}ms`);
     }
-    //////////////////////////////////////////////////////////////////////////////
-    //HOW QUOTEABLE
+
+	//HOW QUOTEABLE
     if (command === "psych") {
         return message.channel.send("Rules for finding a psychopath: \n1. Favorite color is orange \n2. Likes the left burners, worse if its top left\n3. Calls pizza sauce/tomato sauce gravy\n4. Doesnt like salad\n5. Likes country music\n6. Makes hot chocolate with water\n7. Likes black licorice")
     }
@@ -164,12 +171,12 @@ client.on("message", async message => {
     if (command === "quote") {
 
         let quotes = require(`${homedir}/quotes.json`);
-        var quoteadd = "";
-        var selector;
+        let quoteadd = "";
+        let selector;
         try {
             selector = args[0].toLowerCase();
         } catch (err) {
-            var number = quotes.quotes.length + 1;
+            let number = quotes.quotes.length + 1;
             let quotesend = Math.floor(Math.random() * (number));
             return message.channel.send(`${quotes.quotes[quotesend]}`);
         }
@@ -213,27 +220,27 @@ client.on("message", async message => {
             return message.reply("Sorry, you don't have permissions to use this!");
         else {
             let member = message.mentions.members.first();
-            var role = "";
+            let role;
             switch (parseInt(args[1], 10)) {
                 case 5:
                     role = message.guild.roles.cache.find(role => role.name === `DEFCON 5`);
-                    member.roles.add(role);
+                    await member.roles.add(role);
                     break;
                 case 4:
                     role = message.guild.roles.cache.find(role => role.name === `DEFCON 4`);
-                    member.roles.add(role);
+                    await member.roles.add(role);
                     break;
                 case 3:
                     role = message.guild.roles.cache.find(role => role.name === `DEFCON 3`);
-                    member.roles.add(role);
+                    await member.roles.add(role);
                     break;
                 case 2:
                     role = message.guild.roles.cache.find(role => role.name === `DEFCON 2`);
-                    member.roles.add(role);
+                    await member.roles.add(role);
                     break;
                 case 1:
                     role = message.guild.roles.cache.find(role => role.name === `DEFCON 1`);
-                    member.roles.add(role);
+                    await member.roles.add(role);
                     break;
                 default:
                     return message.reply(`DEFCON not set is ${args[1]} a number between 1-5?`);
@@ -241,34 +248,6 @@ client.on("message", async message => {
             return message.reply(`\n**DEFCON** level set to DEFCON ${args[1]}\nGod Bless their souls`);
         }
     }
-//////////////////////////////////////
-/////////Funny DHS is funny///////////
-//////////////////////////////////////
-// if (command == "xkcd") {
-// 	async function getcomic(args) {
-// 		var comic
-// 		try {
-// 			var response = await fetch(`https://xkcd.com/${args[0]}/info.0.json`);
-// 			comic = await response.text();
-// 			return comic
-// 		} catch (e) {
-// 			console.error(e);
-// 			return message.reply("Something went wrong... Check your number and try again later.")
-// 		}
-
-// 	}
-
-
-    // getcomic();
-
-    // let embed = new Discord.MessageEmbed()
-    // .setTitle(`xkcd #${comic.num}`)
-    // .setAuthor("Randel Munroe")
-    // .setColor(0xffffff)
-    // .image(`${comic.img}`);
-    // return message.channel.send(embed);
-
-    // }
 });
 
 if (process.argv.slice(2).includes("--TEST")) {
@@ -277,4 +256,4 @@ if (process.argv.slice(2).includes("--TEST")) {
 }
 
 //Logging in the bot
-client.login(config.token);
+client.login(config.token).then(() => {console.log("Logged in")});
