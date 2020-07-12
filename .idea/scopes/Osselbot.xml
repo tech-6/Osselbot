@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Osselbot" pattern="(file[Osselbot]:*||file[Osselbot]:*/)&amp;&amp;!file[Osselbot]:.vscode//*&amp;&amp;!file[Osselbot]:.idea//*&amp;&amp;!file[Osselbot]:.github//*&amp;&amp;!file:quotes.json" />
+</component>

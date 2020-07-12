@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 //TODO Write tests
-//TODO Make an automation system for deployment
 //TODO Test all commands
 
 //Those are so I remember stuff
@@ -49,7 +48,7 @@ client.on("message", async message => {
 	//Message processing
 
 	// noinspection SpellCheckingInspection
-	if (message.content.toLowerCase().includes('nigg', 'negro', 'niglet', 'fag', 'f4g', 'n1gg', 'gg3r')) {
+	if (message.content.toLowerCase().includes('nigg'||'negro'||'niglet'||'fag'||'f4g'||'n1gg'||'gg3r')) {
 		await message.delete();
 		return message.reply(`Listen here cum-sock we dont appreciate that here ${message.member}. If you gonna be like that you may just well end up in the JAR and we all know how that ends...`)
 	}
@@ -125,7 +124,7 @@ client.on("message", async message => {
 	}
 
 	if (command === "fix") {
-		if (message.member.roles.cache.some(r => ["Botmeister"].includes(r.name))) {
+		if (message.member.roles.cache.some(r => ["Ally of the Order"].includes(r.name))) {
 			return message.channel.send("I guess it's my fault will fix.");
 		}
 		return;
