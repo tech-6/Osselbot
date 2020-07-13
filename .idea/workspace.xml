@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b599d16-f2d1-4465-ab7b-46d0836a1140" name="Default Changelist" comment="YEET!" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Technicolor-creamsicle/Osselbot.git" />
+      </set>
+    </option>
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="Osselbot" />
+    </order>
+  </component>
+  <component name="ProjectId" id="1eYfZmz1RjmmtfkRAgWhvhU0wKT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript&#10;IntegrationPerformanceTest" />
+    <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.4.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.scopes" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="npm update" />
+      <command value="npm aud" />
+      <command value="jest init" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" nameIsGenerated="true" node-parameters="--trace-warnings" path-to-js-file="src/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Node.js.index.js" />
+      <item itemvalue="npm.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b599d16-f2d1-4465-ab7b-46d0836a1140" name="Default Changelist" comment="" />
+      <created>1594503504770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594503504770</updated>
+      <workItem from="1594503508904" duration="1296000" />
+      <workItem from="1594504906993" duration="2599000" />
+      <workItem from="1594508585562" duration="2573000" />
+      <workItem from="1594529082465" duration="8466000" />
+      <workItem from="1594577270596" duration="1916000" />
+      <workItem from="1594579520654" duration="8100000" />
+      <workItem from="1594617534105" duration="1686000" />
+      <workItem from="1594665639933" duration="485000" />
+    </task>
+    <task id="LOCAL-00001" summary="MMM">
+      <created>1594506036147</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594506036147</updated>
+    </task>
+    <task id="LOCAL-00002" summary="YEET!">
+      <created>1594532442128</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594532442128</updated>
+    </task>
+    <task id="LOCAL-00003" summary="YEET!">
+      <created>1594541009209</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594541009209</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I seem to be more productive recently">
+      <created>1594579321088</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1594579321088</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit message">
+      <created>1594579945773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1594579945773</updated>
+    </task>
+    <task id="LOCAL-00006" summary="UwU">
+      <created>1594584424498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594584424498</updated>
+    </task>
+    <task id="LOCAL-00007" summary="UwU">
+      <created>1594586202525</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594586202525</updated>
+    </task>
+    <task id="LOCAL-00008" summary="UwU">
+      <created>1594586503332</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594586503332</updated>
+    </task>
+    <task id="LOCAL-00009" summary="UwU">
+      <created>1594594127832</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594594127833</updated>
+    </task>
+    <task id="LOCAL-00010" summary="UwU">
+      <created>1594594420007</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1594594420007</updated>
+    </task>
+    <task id="LOCAL-00011" summary="UwU">
+      <created>1594594706506</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594594706506</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Hi John">
+      <created>1594665556204</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594665556204</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="MMM" />
+    <MESSAGE value="YEET!" />
+    <MESSAGE value="I seem to be more productive recently" />
+    <MESSAGE value="Commit message" />
+    <MESSAGE value="UwU" />
+    <MESSAGE value="Hi John" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hi John" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="319" y="126" key="#Deployment" timestamp="1594540766829">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="319" y="126" key="#Deployment/0.23.1440.877@0.23.1440.877" timestamp="1594540766829" />
+    <state x="448" y="91" key="#JavaScript" timestamp="1594509253510">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="448" y="91" key="#JavaScript/0.23.1440.877@0.23.1440.877" timestamp="1594509253510" />
+    <state x="342" y="117" key="#Options" timestamp="1594540618884">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="342" y="117" key="#Options/0.23.1440.877@0.23.1440.877" timestamp="1594540618884" />
+    <state x="303" y="113" key="#SSH_Configurations" timestamp="1594532855654">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="303" y="113" key="#SSH_Configurations/0.23.1440.877@0.23.1440.877" timestamp="1594532855654" />
+    <state x="520" y="327" width="506" height="372" key="#Scopes" timestamp="1594578703433">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="520" y="327" width="506" height="372" key="#Scopes/0.23.1440.877@0.23.1440.877" timestamp="1594578703433" />
+    <state x="510" y="164" key="#Web_Browsers" timestamp="1594578792081">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="510" y="164" key="#Web_Browsers/0.23.1440.877@0.23.1440.877" timestamp="1594578792081" />
+    <state x="183" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594531859963">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="183" y="122" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1594531859963" />
+    <state x="405" y="138" key="#index.js" timestamp="1594504175261">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="405" y="138" key="#index.js/0.23.1440.877@0.23.1440.877" timestamp="1594504175261" />
+    <state x="477" y="331" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1594509266212">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="477" y="331" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1594509266212" />
+    <state x="520" y="358" key="Github.CreateGistDialog" timestamp="1594592332357">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="520" y="358" key="Github.CreateGistDialog/0.0.1440.900@0.0.1440.900" timestamp="1594592332357" />
+    <state width="709" height="237" key="GridCell.Tab.0.bottom" timestamp="1594665634590">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="709" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594665634590" />
+    <state width="1419" height="223" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594578512300" />
+    <state width="709" height="237" key="GridCell.Tab.0.center" timestamp="1594665634588">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="709" height="237" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594665634588" />
+    <state width="1419" height="223" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1594578512300" />
+    <state width="709" height="237" key="GridCell.Tab.0.left" timestamp="1594665634584">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="709" height="237" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594665634584" />
+    <state width="1419" height="223" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1594578512299" />
+    <state width="709" height="237" key="GridCell.Tab.0.right" timestamp="1594665634589">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="709" height="237" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594665634589" />
+    <state width="1419" height="223" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1594578512300" />
+    <state width="1417" height="285" key="GridCell.Tab.1.bottom" timestamp="1594506423745">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594506423745" />
+    <state width="1417" height="285" key="GridCell.Tab.1.center" timestamp="1594506423744">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1594506423744" />
+    <state width="1417" height="285" key="GridCell.Tab.1.left" timestamp="1594506423743">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1594506423743" />
+    <state width="1417" height="285" key="GridCell.Tab.1.right" timestamp="1594506423745">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1594506423745" />
+    <state width="1417" height="285" key="GridCell.Tab.2.bottom" timestamp="1594506423747">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594506423747" />
+    <state width="1417" height="285" key="GridCell.Tab.2.center" timestamp="1594506423746">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1594506423746" />
+    <state width="1417" height="285" key="GridCell.Tab.2.left" timestamp="1594506423746">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1594506423746" />
+    <state width="1417" height="285" key="GridCell.Tab.2.right" timestamp="1594506423747">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1594506423747" />
+    <state width="1417" height="285" key="GridCell.Tab.3.bottom" timestamp="1594506423750">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.3.bottom/0.23.1440.877@0.23.1440.877" timestamp="1594506423750" />
+    <state width="1417" height="285" key="GridCell.Tab.3.center" timestamp="1594506423749">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.3.center/0.23.1440.877@0.23.1440.877" timestamp="1594506423749" />
+    <state width="1417" height="285" key="GridCell.Tab.3.left" timestamp="1594506423748">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.3.left/0.23.1440.877@0.23.1440.877" timestamp="1594506423748" />
+    <state width="1417" height="285" key="GridCell.Tab.3.right" timestamp="1594506423749">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1417" height="285" key="GridCell.Tab.3.right/0.23.1440.877@0.23.1440.877" timestamp="1594506423749" />
+    <state x="221" y="79" key="SettingsEditor" timestamp="1594581508163">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="79" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1594581508163" />
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1594578627826" />
+    <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog" timestamp="1594666879709">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="ShowDiffWithBranchDialog/0.23.1440.877@0.23.1440.877" timestamp="1594666879709" />
+    <state x="319" y="180" key="Vcs.Push.Dialog.v2" timestamp="1594596126934">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="319" y="180" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594596126934" />
+    <state x="319" y="198" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1594541018517" />
+    <state x="507" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594665812519">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="507" y="367" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1594665812519" />
+    <state x="507" y="381" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1594532416545" />
+    <state x="624" y="118" width="425" height="685" key="ftp.server.browser" timestamp="1594532940945">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="624" y="118" width="425" height="685" key="ftp.server.browser/0.23.1440.877@0.23.1440.877" timestamp="1594532940945" />
+    <state x="468" y="88" key="git4idea.branch.GitSmartOperationDialog" timestamp="1594665526605">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="468" y="88" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.900@0.0.1440.900" timestamp="1594665526605" />
+    <state width="600" height="418" key="javadoc.popup" timestamp="1594505718787">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1594504649986" />
+    <state width="600" height="418" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1594505718787" />
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup" timestamp="1594581399202">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" width="670" height="675" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1594581399202" />
+    <state x="450" y="363" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1594580339697">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="450" y="363" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1440.900@0.0.1440.900" timestamp="1594580339697" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
