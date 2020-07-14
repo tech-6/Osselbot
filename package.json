@@ -18,11 +18,9 @@
   "files": [
     "/src/"
   ],
-  "devDependencies": {
-    "jest": "^26.1.0"
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "node --trace-warnings ./src/index.js --TEST",
     "start": "node ./src/index.js"
   },
   "repository": {

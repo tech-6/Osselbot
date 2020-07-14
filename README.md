@@ -17,3 +17,10 @@ Example config.js to be placed in /src
      ]
   }
 ```
+---
+# Contributing
+
+If your a member of civilians all partying then talk to @Technicolor Creamsicle#0773
+
+This code follows the Google JS specs for code formatting. 
+If you use the WebStorm IDE this will automatically be applied.
