@@ -152,7 +152,7 @@ client.on('message', async message => {
   }
   
   if (command === 'help') {
-    return message.reply('https://technicolor.2a03.party/bot/');
+    return message.reply('https://technicolor.2a03.party/osselbot/');
   }
   
   if (command === 'fix') {
