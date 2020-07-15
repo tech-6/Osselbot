@@ -4,6 +4,7 @@ A bot that is kinda stupid, but it works surprisingly well
 ![Node.js CI](https://github.com/Technicolor-creamsicle/Osselbot/workflows/Node.js%20CI/badge.svg)
 
 **THIS BOT REQUIRES HEAVY MODIFICATION TO WORK ON OTHER SERVERS!**
+**NPM PACKAGE IS NO LONGER MAINTAINED**
 
 Example config.js to be placed in /src
 
