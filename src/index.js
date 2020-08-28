@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-
-//Those are so I remember stuff
+// These are so I remember stuff
 
 // Load up the libraries
 const Discord = require('discord.js');
@@ -10,11 +9,14 @@ const fs = require('fs');
 const homedir = require('os').homedir;
 const info = require('../package.json');
 
-//Imports config file from the src dir.
+// Imports config file from the src dir.
 const config = require('./config.json');
 
 // This is making a client for discord
 const client = new Discord.Client();
+
+// Stores the last quote
+let last_quote;
 
 function activity() {
   //This function sets a status for the bot currently it is set to Do Not
@@ -66,6 +68,10 @@ client.on('message', async message => {
          all know how that ends...`);
   }
   
+  // Reacts to messages with UwU
+  if (message.content.toLowerCase().includes('uwu')) await message.react(
+      '741755736417108071');
+  
   if (message.author.bot) return;
   if (message.content.indexOf(config.prefix) !== 0) return;
   // Here we separate our "command" name, and our "arguments" for the command.
@@ -98,7 +104,7 @@ client.on('message', async message => {
     // Calculates ping between sending a message and editing it, giving a
     // nice round-trip latency.
     const m = await message.channel.send('Ping?');
-    await m.edit(`Pong! Latency is ${client.ws.ping}ms`);
+    await m.edit('Pong! Latency is`' + client.ws.ping + '` ms');
   }
   
   //HOW QUOTEABLE
@@ -120,7 +126,6 @@ client.on('message', async message => {
     if (!message.member.roles.cache.some(r => [
       'Admin',
       'Moderator',
-      'Member of the Order of the b l u e',
       'Botmeister'].includes(r.name)))
       return message.reply('Sorry, you don\'t have permissions to use this!');
     let embed = new Discord.MessageEmbed().setTitle('SIMP Alert').
@@ -196,15 +201,23 @@ client.on('message', async message => {
 
 ////////////////////////////////////////////////////////////////////////////////
   if (command === 'quote') {
-    
     let quotes = require(`${homedir}/quotes.json`);
     let quoteadd = '';
     let selector;
     try {
       selector = args[0].toLowerCase();
     } catch (err) {
-      let number = quotes.quotes.length;
-      let quotesend = Math.floor(Math.random() * (number + 1));
+      let length = quotes.quotes.length;
+      let quotesend = 0;
+  
+      function choose() {
+        quotesend = Math.floor(Math.random() * (length));
+        console.log(quotesend);
+        if (last_quote === quotesend) choose();
+      }
+  
+      choose();
+      last_quote = quotesend;
       return message.channel.send(`${quotes.quotes[quotesend]}`);
     }
     if (selector === 'add') {
@@ -246,9 +259,7 @@ client.on('message', async message => {
   if (command === 'defcon') {
     //5 levels till ban
     if (!message.member.roles.cache.some(r => [
-      'Admin',
-      'Member of the Order of the b l u e',
-      'Botmeister'].includes(r.name)))
+      'Admin'].includes(r.name)))
       return message.reply('Sorry, you don\'t have permissions to use this!');
     else {
       let member = message.mentions.members.first();
