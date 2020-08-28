@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="9f6d902c-40b4-432f-9949-a2d625d1f8eb" name="Osselbot" url="http://closet.technicolor.2a03.party">
-        <fileTransfer rootFolder="/home/technicolor/osselbot" accessType="SFTP" host="closet.technicolor.2a03.party" port="22" sshConfigId="6a813722-88b4-4195-8883-007723ea90cf" sshConfig="technicolor@closet.technicolor.2a03.party:22 password">
+        <fileTransfer rootFolder="/home/technicolor/osselbot" accessType="SFTP" host="closet.technicolor.2a03.party" port="2220" sshConfigId="6a813722-88b4-4195-8883-007723ea90cf" sshConfig="technicolor@closet.technicolor.2a03.party:2220 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
