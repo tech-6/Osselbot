@@ -1,0 +1,15 @@
+name: osselbot
+description: A stupid discord bot made for stupid people.
+# version: 3.0.0
+# homepage: https://nicolor.tech/bot
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+
+
+dependencies:
+  nyxx: ^2.0.0-rc.4
+  path: ^1.7.0
+
+dev_dependencies:
+  pedantic: ^1.9.0
