@@ -8,10 +8,12 @@ include: package:pedantic/analysis_options.yaml
 # Uncomment to specify additional rules.
 linter:
   rules:
-
     - camel_case_types
 
 
 analyzer:
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
 #   exclude:
 #     - path/to/excluded/files/**
