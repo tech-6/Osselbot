@@ -13,3 +13,7 @@ doc/api/
 
 # MacOS being funky
 .DS_Store
+
+# Config file and executeables
+lib/config.dart
+bin/osselbot.exe
