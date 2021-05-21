@@ -28,18 +28,17 @@ void main(List<String> arguments) {
     ..registerCommand(
         'ping',
         (context, message) => {
-              context.reply(
-                  content: 'pong! ' +
-                      bot.shardManager.shards
-                          .elementAt(context.shardId)
-                          .gatewayLatency
-                          .inMilliseconds
-                          .toString() +
-                      'ms')
+              context.reply(MessageBuilder.content('pong! ' +
+                  bot.shardManager.shards
+                      .elementAt(context.shardId)
+                      .gatewayLatency
+                      .inMilliseconds
+                      .toString() +
+                  'ms'))
             })
     ..registerCommand('info', (context, message) async {
-      await context.sendMessage(
-          embed: await infoCommand(bot, context.guild, context.shardId));
+      await context.sendMessage(MessageBuilder.embed(
+          await infoCommand(bot, context.guild, context.shardId)));
     });
 }
 
@@ -107,7 +106,6 @@ Future<EmbedBuilder> infoCommand(Nyxx bot, Guild? guild, int? shardId) async {
 Future<void> infoSlashCommand(InteractionEvent event, Nyxx bot) async {
   await event.acknowledge();
 
-  await event.respond(
-      embed: await infoCommand(
-          bot, await event.interaction.guild!.getOrDownload(), null));
+  await event.respond(MessageBuilder.embed(await infoCommand(
+      bot, await event.interaction.guild!.getOrDownload(), null)));
 }
