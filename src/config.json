@@ -1,9 +1,0 @@
-{
-    "COMMENT": "THIS IS A CONFIG FOR TESTING THE BOT",
-    "token" : "THIS IS AN API TOKEN",
-    "prefix": "?",
-    "verbalabuse": [
-    "THIS IS MEAN"
-  ]
-}
-    
