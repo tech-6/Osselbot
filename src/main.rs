@@ -1,5 +1,6 @@
 #![allow(non_snake_case)] //Osselbot doesn't follow snake case so we need this
 
+use dotenv::dotenv;
 use std::env;
 
 use serenity::{
@@ -42,6 +43,7 @@ impl EventHandler for Handler {
 
 #[tokio::main]
 async fn main() {
+    dotenv().ok();
     // Configure the client with your Discord bot token in the environment.
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
 
